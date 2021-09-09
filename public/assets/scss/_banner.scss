@@ -1,0 +1,116 @@
+// deneb_banner
+.deneb_banner{
+	position: relative;
+	padding-top: 120px;
+	padding-bottom: 10px;
+	.hero_slider{
+		.signle_slider{
+			.banner_content{
+				@media #{$md}{
+					margin-bottom: 60px;
+				}
+				@media #{$xs}{
+					margin-bottom: 60px;
+				}
+				h1{
+					font-weight: 500;
+					margin-left: -2px;
+					margin-bottom: 10px;
+					@media #{$xs}{
+						font-size: 30px;
+					}
+					span{
+						font-weight: bold;
+						color: $theme_color;
+					}
+				}
+				h5{
+					font-weight: 500;
+					margin-bottom: 15px;
+				}
+				p{
+					margin-bottom: 36px;
+				}
+			}
+			.deneb_img_box{
+				position: relative;
+				float: right;
+				margin-right: 18px;
+			}
+		}
+		.slick-dots{
+			bottom: -50px;
+			li{
+				width: 5px;
+				height: 5px;
+				background: #c3c3c3;
+				border-radius: 50%;
+				button{
+					padding: 0;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+				}
+			}
+			& .slick-active{
+				background: $theme_color;
+				button{
+					&:before{
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: rgb(255, 189, 39);
+						opacity: 0.302;
+						margin-top: -5px;
+					    margin-left: -5px;
+					    position: absolute;
+					    top: 50%;
+					    left: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+// shape_v1
+.shape_v1{
+	.shape_1{
+		position: absolute;
+		left: 0;
+		top: 80px;
+	}
+}
+// .shape_v2
+.shape_v2{
+	.shape_7{
+		position: absolute;
+		right: 0;
+		top: 100px;
+	}
+}
+.shape_v3{
+	.shape_10{
+		position: absolute;
+		left: 0;
+		top: 60px;
+	}
+}
+.shape_v4{
+	.shape_11{
+		position: absolute;
+		right: 0;
+		top: 0px;
+	}
+}
+.shape_v5{
+	.shape_12{
+		position: absolute;
+		left: 0;
+		top: 0px;
+	}
+	.shape_13{
+		position: absolute;
+		left: 40px;
+		bottom: 60px;
+	}
+}

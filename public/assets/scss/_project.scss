@@ -1,0 +1,166 @@
+// Deneb_project css
+.project_v1{
+	.project_button{
+		margin-bottom: 45px;
+		.project_btn{
+			background: transparent;
+			border: none;
+			text-transform: uppercase;
+			margin-left: 20px;
+			margin-right: 20px;
+			color: $title;
+			font-weight: 500;
+			@media #{$md}{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			@media #{$xs}{
+				margin-bottom: 15px;
+			}
+			&.active_btn{
+				box-shadow: 4px 6.928px 15px 0px rgba(254, 176, 0, 0.4);
+				background-image: -moz-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				background-image: -webkit-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				background-image: -ms-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				padding: 8px 25px;
+				color: $white;
+				border-radius: 30px;
+			}
+		}
+	}
+	.projects_slider_content{
+		.single_project{
+			margin-left: 15px;
+			margin-right: 15px;
+			margin-bottom: 10px;
+		}
+		.slick-dots{
+			bottom: -35px;
+			li{
+				width: 15px;
+				height: 5px;
+				background: #f2f2f2;
+				border-radius: 8px;
+				button{
+					padding: 0;
+					width: 15px;
+					height: 5px;
+				}
+			}
+			& .slick-active{
+				background: $theme_color;
+			}
+		}
+	}
+	.grid_item{
+		@media #{$xs}{
+			margin-bottom: 40px;
+		}
+		overflow: hidden;
+		background: $white;
+		border-radius: 10px;
+		@include transition(.5s);
+		margin-bottom: 10px;
+		&:hover{
+			box-shadow: 4px 6.928px 15px 0px rgba(0, 0, 0, 0.15);
+			.deneb_info{
+				h4{
+					a{
+						color: $theme_color;
+					}
+				}
+			}
+		}
+		.deneb_info{
+			padding: 30px;
+			h4{
+				font-weight: 600;
+				a{
+					color: $title;
+				}
+			}
+		}
+	}
+}
+.project_v2{
+	.project_button_2{
+		margin-bottom: 30px;
+		.project_btn{
+			background: transparent;
+			border: none;
+			text-transform: uppercase;
+			margin-left: 20px;
+			margin-right: 20px;
+			color: $title;
+			font-weight: 500;
+			@media #{$md}{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			@media #{$xs}{
+				margin-bottom: 15px;
+			}
+			&.active_btn{
+				box-shadow: 4px 6.928px 15px 0px rgba(254, 176, 0, 0.4);
+				background-image: -moz-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				background-image: -webkit-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				background-image: -ms-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				padding: 8px 25px;
+				color: $white;
+				border-radius: 30px;
+			}
+		}
+	}
+	.grid_wrapper{
+		.grid_item{
+			@media #{$xs}{
+				margin-bottom: 40px;
+			}
+			overflow: hidden;
+			background: $white;
+			border-radius: 10px;
+			@include transition(.5s);
+			&:hover{
+				box-shadow: 4px 6.928px 15px 0px rgba(0, 0, 0, 0.15);
+				.deneb_info{
+					h4{
+						a{
+							color: $theme_color;
+						}
+					}
+				}
+			}
+			.deneb_info{
+				padding: 30px;
+				h4{
+					font-weight: 600;
+					a{
+						color: $title;
+					}
+				}
+			}
+		}
+	}
+}
+.deneb_project{
+	.section_title{
+		h2{
+			position: relative;
+			&:after{
+			    left: 30px;
+			}
+		}
+	}
+}
+// project_v1
+.project_v1{
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 120px;
+}
+// project_v2
+.project_v2{
+	.grid_item{
+		margin-bottom: 30px;
+	}
+}

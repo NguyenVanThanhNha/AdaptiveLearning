@@ -1,0 +1,564 @@
+@import "../../scss/variables";
+
+// deneb_blog css
+.blog_v1{
+	position: relative;
+	padding-bottom: 120px;
+	&:after{
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 0px;
+		background: url(../../images/shape/shape_14.png) no-repeat;
+		background-position: top right;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	.grid_item{
+		@media #{$xs}{
+			margin-bottom: 60px; 
+		}
+		background: $white;
+		border-radius: 10px;
+		overflow: hidden;
+		transition: .5s;
+		&:hover{
+			box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+		}
+		.deneb_info{
+			padding: 25px 30px 22px;
+			.date{
+				color: $theme_color;
+				margin-bottom: 7px;
+				display: block;
+			}
+			h3{
+				font-size: 20px;
+				font-weight: 600;
+				padding-bottom: 10px;
+				a{
+					color: $title;
+				}
+			}
+			p{
+				margin-bottom: 6px;
+			}
+			.link_btn{
+				color: $title;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+		}
+		.deneb_img {
+			img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.deneb_blog{
+	.section_title{
+		h2{
+			position: relative;
+			&:after{
+			    left: 90px;
+			}
+		}
+	}
+}
+// blog_v2
+.blog_v2{
+	.blog_wrap_content{
+		@media #{$xs}{
+			margin-bottom: 60px;
+		}
+		@media #{$md}{
+			margin-bottom: 60px;
+		}
+		.grid_item{
+			margin-bottom: 60px;
+			.deneb_img{
+				img{
+					border-radius: 8px;
+				}
+			}
+			.deneb_info{
+				padding-top: 30px;
+				.post_meta{
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 10px;
+					ul{
+						li{
+							display: inline-block;
+							margin-right: 25px;
+							i{
+								color: #ff8801;
+								margin-right: 10px;
+							}
+							a{
+								color: #a1a1a1;
+							}
+						}
+						&:nth-child(2){
+							li{
+								margin-right: 0;
+								margin-left: 25px;
+							}
+						}
+					}
+				}
+				.title{
+					font-weight: bold;
+					margin-bottom: 10px;
+					a{
+						color: $title;
+					}
+				}
+				p{
+					margin-bottom: 10px;
+				}
+				a.post_btn{
+					display: inline-block;
+				}
+				a.share{
+					float: right;
+					font-size: 15px;
+					color: #a1a1a1;
+					i{
+						color: #ff8801;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+// deneb_single_blog
+.tag a {
+	color: #a1a1a1;
+	transition: all .4s linear 0s;
+	&:hover {
+		color: $theme_color;
+	}
+}
+.deneb_pagination {
+	ul {
+		li {
+			a {
+				transition: all .4s linear 0s;
+				&:hover {
+					color: $white;
+					background-color: $theme_color;
+				}
+				&.active {
+					color: $white;
+					background-color: $theme_color;
+					pointer-events: none;
+				}
+				&.disabled {
+					pointer-events: none;
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+}  
+.deneb_single_blog{
+	.single_blog_wrapper{
+		@media #{$xs}{
+			margin-bottom: 40px;
+		}
+		.post_top_content{
+			.post_img{
+				margin-bottom: 25px;
+			}
+			.post_meta{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+				ul{
+					li{
+						display: inline-block;
+						margin-right: 25px;
+						i{
+							color: #ff8801;
+							margin-right: 10px;
+						}
+						a{
+							color: #a1a1a1;
+						}
+					}
+					&:nth-child(2){
+						li{
+							margin-right: 0;
+							margin-left: 25px;
+						}
+					}
+				}
+			}
+		}
+		.post_content{
+			border-bottom: 1px solid #e1e1e1;
+			padding-bottom: 36px;
+			h3{
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			p{
+				margin-bottom: 10px;
+			}
+			.deneb_blockquote{
+				display: flex;
+				flex-wrap: nowrap;
+    			align-items: center;
+    			margin: 0;
+    			margin-bottom: 10px;
+				.icon{
+					padding-right: 15px;
+					border-right: 3px solid #e1e1e1;
+					i{
+						font-size: 40px;
+						color: $theme_color;
+					}
+				}
+				.info{
+					padding-left: 15px;
+					h4{
+						font-weight: 600;
+						font-size: 22px;
+						line-height: 35px;
+					}
+				}
+			}
+			.innner_content{
+				h3{
+					font-size: 25px;
+					font-weight: bold;
+					margin-bottom: 25px;
+				}
+				img{
+					border-radius: 8px;
+				}
+			}
+		}
+		.post_share_tag{
+			padding-top: 15px;
+			.tag{
+				ul{
+					li{
+						display: inline-block;
+						margin-right: 5px;
+						a{
+							color: #a1a1a1;
+						}
+					}
+				}
+			}
+			.share{
+				float: right;
+				a{
+					color: #a1a1a1;
+					i{
+						margin-right: 10px;
+						color: #ff8801;
+					}
+				}
+			}
+		}
+		.social-share {
+			ul {
+				li {
+					display: inline-block;
+					padding-right: 5px;
+					&:last-child {
+						padding-right: 0;
+						i {
+                           margin-right: 0;
+						}
+					}
+					&:first-child {
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+		.recent_post{
+			h3{
+				font-weight: bold;
+				margin-bottom: 25px;
+				font-size: 25px;
+			}
+			padding-bottom: 40px;
+			.grid_item{
+				.deneb_img{
+					img{
+						@media #{$xs}{
+							width: 100%;
+						}
+					}
+				}
+				.deneb_info{
+					padding: 25px 24px 22px;
+					h3{
+						font-size: 15px;
+						line-height: 21px;
+					}
+				}
+			}
+		}
+		.comment_wrapper{
+			h3{
+				font-weight: bold;
+				margin-bottom: 25px;
+				font-size: 25px;
+			}
+			.single_comment{
+				margin-bottom: 30px;
+				display: flex;
+				flex-wrap: wrap;
+				&:nth-child(odd){
+					padding-left: 50px;
+					padding-bottom: 30px;
+					border-bottom: 1px solid #e1e1e1;
+				}
+				.thumb{
+					max-width: 95px;
+					height: 95px;
+					img{
+						border-radius: 8px;
+					}
+				}
+				.info{
+					margin-left: 15px;
+					width: calc(100% - 110px);
+					h5{
+						margin-top: -3px;
+						font-size: 18px;
+						font-weight: 600;
+					}
+					a{
+						color: $theme_color;
+						i{
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+		.comment_form_wrap{
+			h3{
+				font-weight: bold;
+				margin-bottom: 25px;
+				font-size: 25px;
+			}
+			.comment_form{
+				.form_group{
+					margin-bottom: 30px;
+					.form_control{
+						border-radius: 30px;
+						width: 100%;
+						height: 45px;
+						background: $white;
+						padding-left: 20px;
+						box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+						&:focus{
+							border: 1px solid $theme_color;
+						}
+					}
+					textarea{
+						padding-top: 20px;
+						min-height: 145px;
+					}
+				}
+				.button_box{
+					.deneb_btn{
+						min-width: 170px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// deneb_sidebar
+.deneb_sidebar{
+	.widget{
+		margin-bottom: 50px;
+		.widget-title{
+			font-weight: bold;
+			margin-bottom: 20px;
+			&:before{
+				content: '';
+			    display: inline-block;
+			    width: 5px;
+			    height: 30px;
+			    background: #ffb40c;
+			    margin-right: 10px;
+			    vertical-align: middle
+			}
+		}
+	}
+	.widget_search{
+		.form_group{
+			position: relative;
+			.form_control{
+				border-radius: 30px;
+				padding: 15px 20px 15px 40px;
+				background: $white;
+				box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.2);
+			}
+			.fa-search{
+				position: absolute;
+				left: 17px;
+				top: 12px;
+			}
+			.search_btn{
+				background: -moz-linear-gradient( 0deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+				background: -webkit-linear-gradient( 0deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+				background: -ms-linear-gradient( 0deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				width: 93px;
+				height: 45px;
+				color: $white;
+				border-radius: 30px;
+				background-color: rgb(254,176,0);
+			}
+		}
+	}
+	.widget_admin{
+		.admin_box{
+			img{
+				border-radius: 8px;
+				margin-bottom: 15px;
+			}
+			p{
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.widget_archive,
+	.widget_categories{
+		ul{
+			li{
+				padding: 7px 8px 7px 20px;
+    			border-radius: 19px;
+				margin-bottom: 10px;
+				transition: .5s;
+				cursor: pointer;
+				&:hover{
+					box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+					& a{
+						& span{
+							color: $white;
+							background: $theme_color;
+						}
+					}
+				}
+				a{
+					color: #7f8693;
+					span{
+						transition: .5s;
+						float: right;
+						display: block;
+						width: 45px;
+						height: 25px;
+						line-height: 25px;
+						text-align: center;
+						background: #eeeeee;
+						border-radius: 30px;
+					}
+				}
+			}
+		}
+	}
+	.featured_news{
+		.post_wrap{
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			&:hover{
+				box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.post_img{
+				img{
+					max-width: 128px;
+					height: 108px;
+					border-radius: 8px;
+				}
+			}
+			.post_info{
+				margin-left: 15px;
+				h3{
+					font-weight: 500;
+					font-size: 18px;
+					margin-bottom: 10px;
+					a{
+						color: #626667;
+					}
+				}
+				p{
+					color: $theme_color;
+				}
+			}
+		}
+	}
+	.widget_tag_cloud{
+		ul{
+			li{
+				display: inline-block;
+				margin-right: 10px;
+				margin-bottom: 15px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				a{
+					display: block;
+					padding: 3px 10px 3px 3px;
+					border: 1px solid #ccc;
+					border-radius: 30px;
+					color: #8e8e8f;
+					span{
+						display: inline-block;
+						width: 24px;
+						height: 24px;
+						line-height: 24px;
+						text-align: center;
+						border-radius: 50%;
+						background: #cccccc;
+						color: #ccc;
+						margin-right: 10px;
+						transition: .5s;
+					}
+					&:hover,
+					&:focus{
+						span{
+							color: $white;
+							background-image: -moz-linear-gradient( 90deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+							background-image: -webkit-linear-gradient( 90deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+							background-image: -ms-linear-gradient( 90deg, rgb(255,189,39) 0%, rgb(254,176,0) 100%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.link_btn {
+    display: inline-block;
+    i {
+        color: $theme_color;
+        padding-right: 10px;
+    }
+}

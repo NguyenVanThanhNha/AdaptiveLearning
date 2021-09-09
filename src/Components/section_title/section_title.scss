@@ -1,0 +1,24 @@
+@import "../../scss/variables";
+
+.section_title{
+	max-width: 570px;
+	margin: auto;
+	margin-bottom: 45px;
+	h2{
+		@media #{$xs}{
+			font-size: 32px
+		}
+		margin-bottom: 14px;
+		position: relative;
+		&:after{
+		    position: absolute;
+		    content: '';
+		    top: -20px;
+		    background: url(../../images/shape/title.png) no-repeat;
+		    display: inline-block;
+		    width: 96px;
+		    height: 67px;
+		    z-index: -1;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Deneb - A Digital Agency HTML Template
+    Template URI: 
+    Description: Deneb – Deneb is a Digital Agency html Template designed keeping in mind all types of agencies such as SEO Agency,Web Design Agency, Web Dev Agency etc. It comes with 6 Layered html files. All layers and objects are perfectly customizable and grouped properly. You can easily edit files and create custom designs.
+    Author: 
+    Author URI: 
+    Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
+CSS INDEX
+----------------------------------------------------------------------------------
+1.Common css
+2. header css
+3. Banner css
+4. service css
+5. about css
+6. project css
+7. pricing css
+8. testimonial css
+9. blog css
+10.contact css
+11.features css
+12. Footer css
+-----------------------------------------------------------------------------------*/
+
+
+
+// Variables
+@import 'variables';
+// Mixin
+@import 'mixin';
+// Common
+@import 'common';
+// Header
+@import 'header';
+// Banner
+@import 'banner';
+// Service
+@import 'service';
+// About
+@import 'about';
+// Project
+@import 'project';
+// Pricing
+@import 'pricing';
+// Testimonial
+@import 'testimonial';
+// blg
+@import 'blog';
+// contact
+@import 'contact';
+// Features
+@import 'features';
+// Footer
+@import 'footer';

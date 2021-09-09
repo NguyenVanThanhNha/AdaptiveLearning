@@ -1,0 +1,112 @@
+// Deneb Contact css
+.deneb_contact{
+	position: relative;
+	.section_title{
+		@media #{$md}{
+			margin: 0;
+			margin-bottom: 60px;
+		}
+	}
+	.deneb_img_box{
+		@media #{$md}{
+			margin-bottom: 60px;
+		}
+		@media #{$xs}{
+			margin-bottom: 60px;
+		}
+	}
+	.contact_form{
+		.form_group{
+			margin-bottom: 30px;
+			.form_control{
+				border-radius: 30px;
+				width: 100%;
+				height: 45px;
+				background: $white;
+				padding-left: 20px;
+				box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+			}
+			textarea{
+				padding-top: 20px;
+				min-height: 145px;
+			}
+		}
+		.button_box{
+			.deneb_btn{
+				min-width: 170px;
+			}
+		}
+	}
+}
+// contact_v1 css
+.contact_v1{
+	padding-bottom: 100px;
+	z-index: 1;
+	&:after{
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: 100px;
+		background: url(../images/shape/shape_15.png) no-repeat;
+		background-position: bottom left;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+}
+.contact_v1{
+	.section_title{
+		h2{
+			position: relative;
+			&:after{
+			    left: -20px;
+			}
+		}
+	}
+}
+.cantact_v2{
+	padding-top: 120px;
+	.section_title{
+		h2{
+			position: relative;
+			&:after{
+			    left: -30px;
+			}
+		}
+	}
+}
+// cantact_v2
+.cantact_v2{
+	.section_title{
+		margin: 0;
+		margin-bottom: 40px;
+	}
+	.contact_form{
+		.form_group{
+			select{
+				border-radius: 30px;
+				width: 100%;
+				height: 45px;
+				background: $white;
+				padding-left: 20px;
+				box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+				option{
+					max-width: 300px;
+				}
+			}
+		}
+	}
+}
+
+// deneb_map
+.deneb_map{
+	padding-bottom: 170px;
+	.map_box{
+		iframe{
+			width: 100%;
+			height: 540px;
+			border: none;
+			display: inherit;
+		}
+	}
+}

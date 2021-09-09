@@ -1,0 +1,145 @@
+// deneb_testimonial
+.deneb_testimonial{
+	overflow: hidden;
+	padding-bottom: 165px;
+	.row1{
+		max-width: 700px;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		margin-bottom: 110px;
+		.single_img{
+			border-radius: 50%;
+			opacity: .7;
+			box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.3);
+			img{
+				opacity: .7;
+			}
+			&:nth-child(2){
+				margin-top: -25px;
+			}
+		}
+		.sm_img{
+			border-radius: 50%;
+			width: 88px;
+			height: 88px;
+		}
+	}
+	.row2{
+		display: flex;
+		justify-content: space-between;
+		.single_img{
+			border-radius: 50%;
+			opacity: .7;
+			box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.3);
+			img{
+				border-radius: 50%;
+				opacity: .7;
+			}
+		}
+		.sm_img{
+			border-radius: 50%;
+			width: 88px;
+			height: 88px;
+		}
+	}
+	.testimonial_slide{
+		max-width: 730px;
+		text-align: center;
+		margin: auto;
+		margin-top: -200px;
+		.single_testimonial{
+			padding-top: 20px;
+			.client_img{
+				max-width: 200px;
+				max-height: 200px;
+				position: relative;
+				margin: auto;
+				margin-bottom: 30px;
+				border-radius: 50%;
+				box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+				z-index: 1;
+				&:after{
+					content: '';
+					width: 200px;
+					height: 200px;
+					position: absolute;
+					top: -10px;
+					right: -10px;
+					border-radius: 50%;
+					background-image: -moz-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+					background-image: -webkit-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+					background-image: -ms-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+					z-index: -1;
+				}
+				img{
+					margin: 0 auto;
+					border-radius: 50%;
+					max-width: 200px;
+					max-height: 200px;
+				}
+				.qoute{
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+					text-align: center;
+					border-radius: 50%;
+					color: $white;
+					font-size: 18px;
+					background-image: -moz-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+					background-image: -webkit-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+					background-image: -ms-linear-gradient( 180deg, rgb(254,176,0) 0%, rgb(255,188,38) 100%);
+				}
+			}
+			.client_info{
+				h3{
+					font-weight: bold; 
+				}
+				h5{
+					font-size: 18px;
+					color: #ffbb23;
+					font-weight: 400;
+				}
+				p{
+					padding-top: 20px;
+				}
+			}
+		}
+		.slick-dots{
+			bottom: -50px;
+			li{
+				width: 15px;
+				height: 5px;
+				background: #c3c3c3;
+				border-radius: 8px;
+				button{
+					padding: 0;
+					width: 15px;
+					height: 5px;
+				}
+			}
+			& .slick-active{
+				background: $theme_color;
+			}
+		}
+	}
+}
+.deneb_testimonial{
+	.section_title{
+		h2{
+			position: relative;
+			&:after{
+			    left: 50px;
+			}
+		}
+	}
+}
+// testimonial_v1
+.testimonial_v1{
+	position: relative;
+	
+}
