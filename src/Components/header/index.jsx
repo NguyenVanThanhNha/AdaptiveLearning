@@ -30,16 +30,16 @@ export default function Index() {
                                         <ul>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">Home</NavLink></li>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/about">About Us</NavLink></li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/services">Learning</NavLink></li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/portfolios">Portfolio</NavLink></li>
+                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/services">Portfolio</NavLink></li>
+                                            {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/learning">Learned</NavLink></li> */}
                                             <li className="menu-item"><a href="#">Blog</a>
                                                 <ul className="sub-menu">
                                                     <li className="menu-item"><NavLink exact to="/blog">Blog</NavLink></li>
                                                     <li className="menu-item"><Link to="/blog_details/1">Blog Details</Link></li>
                                                 </ul>
                                             </li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact">Forum</NavLink></li>
-                                            <li className="menu-item"><Link className="deneb_btn" to="/contact">Sign up</Link></li>
+                                            {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact">Forum</NavLink></li> */}
+                                            <li className="menu-item"><Link className="deneb_btn" to="/dashboard">Learn Now</Link></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -73,11 +73,11 @@ export default function Index() {
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">Home</NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/about">About Us</NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/services">Services</NavLink></li>
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/portfolios">Portfolio</NavLink></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/portfolios">Learned</NavLink></li>
                                 <li className="menu-item"><NavLink exact to="/blog">Blog</NavLink></li>
                                 <li className="menu-item"><Link to="/blog_details/1">Blog Details</Link></li>
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact">Contact Us</NavLink></li>
-                                <li className="menu-item"><Link className="deneb_btn" to="/contact">Hire Us</Link></li>
+                                {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/forum">Forum</NavLink></li> */}
+                                <li className="menu-item"><Link className="deneb_btn" to="/dashboard">Learn now</Link></li>
                                 </ul>
                             </div>
                         </div>

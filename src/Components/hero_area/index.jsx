@@ -30,24 +30,27 @@ export default function Index() {
                             title="Adaptive "
                             sub_title="Learning"
                             heading="Empower for the age of digital learning"
-                            description="Nulla id euismod massa. Donec accumsan semper lacus, vestibulum gravida ante sed eu lacus et diam lacinia."
-                            url="/contact"
+                            description="Digital learning is opening the world to new possibilities. We truly 
+                            believe in the power of technology and learner-centered design to empower great teaching and a lifelong pursuit of knowledge.."
+                            url="/learning"
                             img={slider_01_img}
                         />
                         <SliderItem
                             title="Adaptive "
                             sub_title="Learning"
                             heading="Empower for the age of digital learning"
-                            description="Nulla id euismod massa. Donec accumsan semper lacus, vestibulum gravida ante sed eu lacus et diam lacinia."
-                            url="/contact"
+                            description="Digital learning is opening the world to new possibilities. We truly believe in the power of technology and 
+                            learner-centered design to empower great teaching and a lifelong pursuit of knowledge.."
+                            url="/learning"
                             img={slider_02_img}
                         />
                         <SliderItem
                             title="Adaptive "
                             sub_title="Learning"
                             heading="Empower for the age of digital learning"
-                            description="Nulla id euismod massa. Donec accumsan semper lacus, vestibulum gravida ante sed eu lacus et diam lacinia."
-                            url="/contact"
+                            description="Digital learning is opening the world to new possibilities. We truly believe in the power of technology and
+                             learner-centered design to empower great teaching and a lifelong pursuit of knowledge.."
+                            url="/learning"
                             img={slider_03_img}
                         />
                     </Slider>

@@ -12,7 +12,7 @@ export default function Index() {
                 <div className="row align-items-center">
                     <div className="col-lg-6  wow fadeInLeft">
                         <div className="section_title">
-                            <h2>Over 500+ Course & rich material</h2>
+                            <h2>Over 50+ Course & rich material</h2>
                         </div>
                         <div className="deneb_content_box">
                             <p>
