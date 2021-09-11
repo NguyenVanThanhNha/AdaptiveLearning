@@ -19,6 +19,7 @@ import {
 import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
+import Quiz from './Components/quiz/Quiz';
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1">
           <Lesson1/>
+        </Route>
+        <Route exact path="/dashboard/courses/math10/c5l1/test1">
+          <Quiz/>
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1/d1">
           <Slideimg/>
