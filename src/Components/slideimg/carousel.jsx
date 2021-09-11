@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { Button } from 'react-bootstrap';
 import Swipe from 'react-easy-swipe';
-import '../../Components/Carousel/carousel.scss';
-
+import './carousel.scss'
+import { Link } from "react-router-dom";
 function Carousel({
   data,
   time,
@@ -209,6 +210,7 @@ function Carousel({
           }
         </div>
       }
+      <a class="deneb_btn" ><Link to="/dashboard/courses/math10/c5l1">BACK</Link></a>
     </div >
   )
 }
