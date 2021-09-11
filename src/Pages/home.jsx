@@ -5,10 +5,14 @@ import Services from "../Components/services";
 import About from "../Components/about";
 import ProjectsInfo from "../Components/projects_info";
 import Learning from "../Components/learning";
-import Pricing from "../Components/pricing";
-import Testimonials from "../Components/testimonials";
 import Blogs from "../Components/blogs";
-import Contact from "../Components/contact";
+
+import Amplify from '@aws-amplify/core'
+import { Auth } from '@aws-amplify/auth'
+import awsmobile from '../aws-exports';
+
+Amplify.configure(awsmobile)
+Auth.configure(awsmobile)
 
 export default function Home() {
     return (
