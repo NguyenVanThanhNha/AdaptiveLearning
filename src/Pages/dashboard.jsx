@@ -6,9 +6,12 @@ import Layoutdashboard from "../Layoutsdashboard"
 import { AmplifyAuthenticator, AmplifySignOut, AmplifySignIn,AmplifySignUp } from '@aws-amplify/ui-react'
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import Lesson from './lessons'
-import {Auth} from "aws-amplify";
-import { AmplifyTheme } from 'aws-amplify-react';
+import Amplify from '@aws-amplify/core'
+import { Auth } from '@aws-amplify/auth'
+import awsconfig from './aws-exports'
 
+Amplify.configure(awsconfig)
+Auth.configure(awsconfig)
 
 const MyTheme = {
     signInButtonIcon: { 'display': 'none' },
