@@ -96,8 +96,8 @@ export default function Index() {
                     </div>
                     <div className="document-option">
                       <div className="lesson-title "><h1>Document</h1></div>
-                      <a href="../pdf_content/pdf.html">Lesson 1</a>
-                      <a href="../pdf_content/pdf2.html">Lesson 2</a>
+                      <a>< Link to="./c5l1/d1">Document 1</Link></a>
+                      <a>< Link to="./c5l1/d1">Document 2</Link></a>
                     </div>  
                   </div>
                   <div className="learn">
@@ -152,8 +152,8 @@ export default function Index() {
                     </div> 
                     <div className="document-option">
                       <div className="lesson-title "><h1>Document</h1></div>
-                      <a href="../pdf_content/pdf.html">Lesson 1</a>
-                      <a href="../pdf_content/pdf2.html">Lesson 2</a>
+                      <a>< Link to="./c5l1/d1">Document 1</Link></a>
+                      <a>< Link to="./c5l1/d1">Document 2</Link></a>
                     </div>    
                   </div>
                   <div className="learn">
