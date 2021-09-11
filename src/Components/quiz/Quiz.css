@@ -1,0 +1,46 @@
+html,
+body,
+#root{
+    height: 100%;
+}
+
+.quiz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin-top: 200px;
+}
+
+.quiz .quiz_card{
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+label.radio{
+    display: block;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 5px ;
+    font-size: 20px;
+}
+
+.mb-5{
+    width: 500px;
+    text-align: justify;
+    display: absolute;
+}
+.quiz_card-content{
+    width: 800px;
+}
+.quiz_card{
+    width: 800px;
+}
+label.radio+.radio{
+    margin-left: 0;
+}
+
+label.radio input{
+    margin-right: 10px;
+}

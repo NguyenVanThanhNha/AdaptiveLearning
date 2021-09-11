@@ -104,7 +104,7 @@ export default function Index() {
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="./quiz_lesson1.html">Test 1: Angles in Standard Position</a>
+                      <a>< Link to="./c5l1/test1">Test 1: Angles in Standard Position</Link></a>
                       </div>
                       <div className="practice-noti">
                       <VideoModal title="Try more to be better"/>
