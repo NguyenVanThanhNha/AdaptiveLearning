@@ -17,9 +17,9 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Lesson1 from './Components/m10lesson1';
+// import Lesson1 from './Components/m10lesson1';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
- 
+import Lesson1 from './Components/m10lesson1/index';
 
 function App() {
   return (

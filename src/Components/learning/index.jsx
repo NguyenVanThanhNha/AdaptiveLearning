@@ -57,7 +57,7 @@ export default function Index() {
             <div className="container">
                 <SectionTitle 
                     title="Popular course"
-                    description=" When unknow printer took a gallery of type and scramblted it to makea type specimen book"
+                    description=" "
                 />
                 <div className="row">
                     <div className="col-lg-12 carousel-style projects_slider_content">
