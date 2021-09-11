@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Component } from "react/cjs/react.production.min";
 import  './m10lesson1.scss'
 // import *  from 'mdb-react-ui-kit'; // lib
@@ -7,16 +8,17 @@ import  './m10lesson1.scss'
 export default function Index() {
       return (
         <div>
+          
           <div className="header_2" id="header2">
+          <a ><Link to="/dashboard/courses/math10">Home</Link></a>
             <div className="section-title">
               <div className="subject-name">
-                {/* <a href="#" class="link-primary">Primary link</a>  */}
                 <h1>Math 10</h1>
               </div>
               <h2 className="lesson-name"> Unit 1: Trigonometric Fuctions</h2>
             </div>
           </div>
-          <div className="wrapper">
+          {/* <div className="wrapper">
             <div className="slidebar">
               <h2>index</h2>
               <div className="mode-button">
@@ -29,7 +31,7 @@ export default function Index() {
                 <li><a href="#part4">The Law of Cosines</a></li>
               </ul>
             </div>
-          </div>
+          </div> */}
           {/* End of Header Section 2 */}
           <div className="content content-container">
             <div className="box-item" style={{marginTop: '30px'}}>

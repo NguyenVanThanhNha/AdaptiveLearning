@@ -29,7 +29,7 @@ export default function Index() {
                                     <nav className="main_menu">
                                         <ul>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li>
+                                            {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/classes">CLASSES</NavLink></li>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/forum">FORUM</NavLink></li>
@@ -71,7 +71,7 @@ export default function Index() {
                                 </div>
                                 <ul className="sidebar-menu">
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li>
+                                {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/classes">CLASSES</NavLink></li>
                                 <li className="menu-item"><NavLink exact to="/blog">INFORMATION</NavLink></li>

@@ -3,6 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500,700&display=swap');
 
+:root{
+	--amplify-primary-color: #feb000;
+	--amplify-primary-tint: #feb000;
+	--amplify-primary-shade: #feb000;
+	--amplify-font-family: Helvetica Neue Light;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -180,3 +186,5 @@ input.form_control{
     opacity: 0;
   }
 }
+
+

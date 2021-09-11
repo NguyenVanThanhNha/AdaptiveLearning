@@ -2,10 +2,10 @@
 
 .content-container {
 	min-height: 100vh;
-	width: 70%;
+	width: 80%;
 	align-items: center;
 	display: flex;
-	margin-left: 30%;
+    margin-left: 14%;
 }
 .content {
 	flex-direction: column;
@@ -14,6 +14,7 @@
 	h1 {
 		font-size: 20px;
 		font-weight: bold;
+		margin-bottom: 10px;
 	}
 }
 .content-inside {
@@ -124,7 +125,7 @@ iframe {
 .header_2 {
 	background-color: #ffb404;
 	padding: 10px 16px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 .subject-name {
 	margin-left: 100px;
@@ -148,6 +149,7 @@ iframe {
 	font-size: 30px;
 	font-weight: bold;
 	width: 500px;
+	margin-bottom: 30px;
 	h1 {
 		font-weight: bold;
 		font-size: 20px;
@@ -193,7 +195,7 @@ iframe {
 	width: 950px;
 	margin-bottom: 30px;
 	margin-right: 80px;
-	background-color: #f7f8fa;
+	background-color: #d4d7dc;
 	border-radius: 10px;
 }
 .document-option {

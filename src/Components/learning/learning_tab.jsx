@@ -17,6 +17,16 @@ import physicimg12 from "../../images/physics12.jpg"
 import chemistryimg10 from "../../images/chemistry10.jpg"
 import chemistryimg11 from "../../images/chemistry11.jpg"
 import chemistryimg12 from "../../images/chemistry12.jpg"
+import course_physics from "../../images/course_physic.jpg"
+import course_chemistry from "../../images/course_chemistry.jpg"
+import course_biological from "../../images/course_biological.jpg"
+import course_history from "../../images/course_history.jpg"
+import course_geography from "../../images/course_geography.jpg"
+import course_business from "../../images/course_business.jpg"
+import course_python from "../../images/course_python.jpg"
+import course_photoshop from "../../images/course_photoshop.jpg"
+
+
 import SectionTitle from "../section_title";
 import PortfolioItem from "../../SingleFeatures/portfolio_item";
 
@@ -37,16 +47,16 @@ export default function PortfoliosTab() {
                                     <Nav.Link eventKey="design">All course</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="development">Mathematics</Nav.Link>
+                                    <Nav.Link eventKey="development">Math</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="branding">Physics</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="marketing">Schemistry</Nav.Link>
+                                    <Nav.Link eventKey="marketing">Chemistry</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="mobile">English</Nav.Link>
+                                    <Nav.Link eventKey="mobile">Peronal Development</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>
@@ -59,72 +69,72 @@ export default function PortfoliosTab() {
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
                                             img={mathimg10}
-                                            title="Math 10"
-                                            tag="Development"
+                                            title="Math"
+                                            tag="The essence of mathematics lies in its freedom."
                                             url="/dashboard/courses/math10"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_02}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_physics}
+                                            title="Physics"
+                                            tag="The universe is waiting for you to conquer"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={mathimg11}
-                                            title="Math 11"
-                                            tag="Development"
+                                            img={course_chemistry}
+                                            title="Chemistry"
+                                            tag="Welcome to the world of matter"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_04}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_biological}
+                                            title="Biological"
+                                            tag="Learn more about humans and other creatures"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_05}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_history}
+                                            title="History"
+                                            tag="Let's go back in time together"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_06}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_geography}
+                                            title="Geography"
+                                            tag="Take you anywhere in the world"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={mathimg12}
-                                            title="Math 12"
-                                            tag="Development"
+                                            img={course_python}
+                                            title="Python"
+                                            tag="Programming changes our thinking about life"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_08}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_business}
+                                            title="Business"
+                                            tag="Prepare for a richer future"
                                             url="#"
                                         />
                                    </div>
                                    <div className="col-lg-4 col-md-6">
                                         <PortfolioItem
-                                            img={portfolioImg_09}
-                                            title="Design & Develop"
-                                            tag="Design"
+                                            img={course_photoshop}
+                                            title="Photoshop"
+                                            tag="Improve aesthetic ability"
                                             url="#"
                                         />
                                    </div>
@@ -136,7 +146,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={mathimg10}
                                         title="Math 10"
-                                        tag="Development"
+                                        tag="The essence of mathematics lies in its freedom."
                                         url="#"
                                     />
                                 </div>
@@ -144,7 +154,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={mathimg11}
                                         title="Math 11"
-                                        tag="Development"
+                                        tag="There isn't a genius that doesn't mix a bit of madness"
                                         url="#"
                                     />
                                 </div>
@@ -152,7 +162,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={mathimg12}
                                         title="Math 12"
-                                        tag="Development"
+                                        tag="Pure mathematics is, in its own way, the poetry of logical thinking"
                                         url="#"
                                     />
                                 </div>
@@ -164,7 +174,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={physicimg10}
                                         title="Physics 10"
-                                        tag="Development"
+                                        tag="The universe is waiting for you to conquer"
                                         url="#"
                                     />
                                 </div>
@@ -172,7 +182,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={physicimg11}
                                         title="Physics 11"
-                                        tag="Development"
+                                        tag="A physicist is just how an atom sees itself."
                                         url="#"
                                     />
                                 </div>
@@ -180,7 +190,7 @@ export default function PortfoliosTab() {
                                     <PortfolioItem
                                         img={physicimg12}
                                         title="Physics 12"
-                                        tag="Development"
+                                        tag="A physicist is just how an atom sees itself."
                                         url="#"
                                     />
                                 </div>
