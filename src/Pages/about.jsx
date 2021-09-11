@@ -14,10 +14,10 @@ export default function About() {
         <PageHeader title="About Us" />
         <HireUs/>
         <Skills/>
-        <WorkExperience/>
-        <Testimonials/>
-        <Blogs/>
-        <Contact/>
+        {/* <WorkExperience/> */}
+        {/* <Testimonials/> */}
+        {/* <Blogs/> */}
+        {/* <Contact/> */}
        </Layout>
     )
 }

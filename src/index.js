@@ -2,6 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Amplify from '@aws-amplify/core'
+import { Auth } from '@aws-amplify/auth'
+import awsconfig from './aws-exports'
+
+Amplify.configure(awsconfig)
+Auth.configure(awsconfig)
 
 ReactDOM.render(
   <React.Fragment>

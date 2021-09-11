@@ -12,17 +12,15 @@ export default function Index() {
                 <div className="row align-items-center">
                     <div className="col-lg-6  wow fadeInLeft">
                         <div className="section_title">
-                            <h2>Over 500+ Course & rich material</h2>
+                            <h2>Over 5+ Course & rich material</h2>
                         </div>
                         <div className="deneb_content_box">
                             <p>
-                                Orci varius natoque penatibus et magnis dis parturient montes,
-                                nascetur ridiculus mus. Phasellus at orci non risus luctus commodo.
-                                Ut nibh tellus, faucibus nec gravida.
+                                With the hope of bringing knowledge to everyone in this country of Vietnam, 
+                                our development team will always monitor, update and enrich the lesson data warehouse, 
+                                contributing to improving the quality of education in the country.
                             </p>
                             <p>
-                                Duis quis ipsum leo. Praesent vitae tellus ac ante porta mattis vel
-                                non ex. Quisque a finibus justo.
                             </p>
                         </div>
                     </div>
@@ -36,7 +34,7 @@ export default function Index() {
                                         alt=""
                                     />
                                 </div>
-                                <h3>300+</h3>
+                                <h3>5+</h3>
                                 <p>Course</p>
                             </div>
                             <div className="single_achivment wow fadeInUp" data-wow-delay=".1s">
@@ -47,7 +45,7 @@ export default function Index() {
                                         alt=""
                                     />
                                 </div>
-                                <h3>2500+</h3>
+                                <h3>10+</h3>
                                 <p>Practices</p>
                             </div>
                             <div className="single_achivment wow fadeInUp" data-wow-delay=".2s">
@@ -58,7 +56,7 @@ export default function Index() {
                                         alt=""
                                     />
                                 </div>
-                                <h3>200+</h3>
+                                <h3>2+</h3>
                                 <p>Active Projects</p>
                             </div>
                             <div className="single_achivment wow fadeInUp" data-wow-delay=".3s">
@@ -69,7 +67,7 @@ export default function Index() {
                                         alt=""
                                     />
                                 </div>
-                                <h3>1+</h3>
+                                <h3>0+</h3>
                                 <p>Years Exerience</p>
                             </div>
                         </div>

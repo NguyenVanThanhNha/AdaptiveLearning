@@ -4,7 +4,7 @@ import HeroArea from "../Components/hero_area";
 import Services from "../Components/services";
 import About from "../Components/about";
 import ProjectsInfo from "../Components/projects_info";
-import Portfolios from "../Components/portfolios";
+import Learning from "../Components/learning";
 import Pricing from "../Components/pricing";
 import Testimonials from "../Components/testimonials";
 import Blogs from "../Components/blogs";
@@ -17,11 +17,11 @@ export default function Home() {
             <Services/>
             <About/>
             <ProjectsInfo/>
-            <Portfolios/>
-            <Pricing/>
-            <Testimonials/>
+            <Learning/>
+            {/* <Pricing/> */}
+            {/* <Testimonials/> */}
             <Blogs/>
-            <Contact/>
+            {/* <Contact/> */}
       </Layout>
     )
 }

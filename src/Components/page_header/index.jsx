@@ -7,7 +7,8 @@ import "./page_header.scss";
 export default function Index(props) {
     const { title } = props;
     return (
-        <section className="deneb_breadcrumb bg_image" style={{ backgroundImage: `url(${pageHeaderImg})`}}>
+        // <section className="deneb_breadcrumb bg_image" style={{ backgroundColor: `url(${pageHeaderImg})`}}>
+        <section className="deneb_breadcrumb bg_image" style={{ backgroundColor: 'white'}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

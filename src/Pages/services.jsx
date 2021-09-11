@@ -13,9 +13,9 @@ export default function Services() {
             <PageHeader title="Our Services"/>
             <ServicesTabs/>
             <WorkFlow/>
-            <Pricing/>
+            {/* <Pricing/> */}
             <Testimonials/>
-            <Contact/>
+            {/* <Contact/> */}
       </Layout>
     )
 }

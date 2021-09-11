@@ -11,7 +11,7 @@ export default function SliderItem(props) {
                         <h1>{title}<br /><span>{sub_title}</span></h1>
                         <h5>{heading}</h5>
                         <p>{description}</p>
-                        <Link to={url} className="deneb_btn">Hire Me</Link>
+                        <Link to={url} className="deneb_btn">Start</Link>
                     </div>
                 </div>
                 <div className="col-lg-7">
