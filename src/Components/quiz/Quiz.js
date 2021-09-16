@@ -54,7 +54,6 @@ const Quiz= () => {
         onAnswersCheck={ () => setShowModal(true)}
         time={time}
       />}
-
       {showModal && <Modal
         onClose={() => setShowModal(false)}
         results={answers}

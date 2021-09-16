@@ -50,6 +50,7 @@ const Question = ({
           <div className="control" ref={radioWrapper}>
             {data.choices.map((choice, i) => (
               <label className="radio has-background-light" key={i}>
+                <div className="option">
                 <input
                   type="radio"
                   name="answer"
@@ -57,6 +58,7 @@ const Question = ({
                   onChange={changeHandler}
                 />
                 {choice}
+                </div>
               </label>
             ))}
           </div>

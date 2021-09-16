@@ -6,15 +6,18 @@ body,
 
 .quiz{
     display: flex;
-    align-items: center;
     justify-content: center;
+    text-align: center;
     min-height: 100%;
-    margin-top: 200px;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
 }
-
+.control{
+    width: 600px;
+    margin-left: 7.5%;
+}
 .quiz .quiz_card{
-    max-width: 400px;
-    width: 100%;
     text-align: center;
 }
 
@@ -25,22 +28,39 @@ label.radio{
     margin-bottom: 5px ;
     font-size: 20px;
 }
-
+.content{
+    background-color: lightblue;
+    width: 700px;
+}
 .mb-5{
-    width: 500px;
-    text-align: justify;
-    display: absolute;
+    width: 700px;
+    font-size: 20px;
+    padding: 30px 50px 30px 30px;
+}
+.radio{
+    border: solid black;
+    margin-top: 20px;
+    color: black;
+    font-weight: 500;
+}
+.option {
+    display: flex;
+    align-items: center;
 }
 .quiz_card-content{
-    width: 800px;
+    width: 700px;
+    background-color: aquamarine;
 }
 .quiz_card{
-    width: 800px;
+    width: 700px;
 }
 label.radio+.radio{
     margin-left: 0;
 }
-
+.button{
+    border: solid black;
+    padding: 15px;
+}
 label.radio input{
     margin-right: 10px;
 }
