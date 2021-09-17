@@ -1,0 +1,45 @@
+{
+  "paths": [
+    {
+      "name": "/hello",
+      "lambdaFunction": "reactrestauth",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/GET"
+        ]
+      },
+      "policyResourceName": "/hello"
+    }
+  ],
+  "resourceName": "reactrestauthapi",
+  "apiName": "reactrestauthapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "reactrestauth"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-reactjsjavamaster-dev-201421-authRole",
+    "unAuthRoleName": "amplify-reactjsjavamaster-dev-201421-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "reactrestauth",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

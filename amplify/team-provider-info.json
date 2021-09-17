@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactjsjavamaster-dev-201421-authRole",
+      "UnauthRoleArn": "arn:aws:iam::750002390386:role/amplify-reactjsjavamaster-dev-201421-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::750002390386:role/amplify-reactjsjavamaster-dev-201421-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-reactjsjavamaster-dev-201421-deployment",
+      "UnauthRoleName": "amplify-reactjsjavamaster-dev-201421-unauthRole",
+      "StackName": "amplify-reactjsjavamaster-dev-201421",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:750002390386:stack/amplify-reactjsjavamaster-dev-201421/51ec44f0-17b9-11ec-ae96-069e10fbc0e6",
+      "AmplifyAppId": "d2ql2ocm1ri1k2"
+    },
+    "categories": {
+      "auth": {
+        "reactjsjavamasterea3b8b18": {}
+      }
+    }
+  }
+}
