@@ -1,13 +1,13 @@
 import React,{ useState, useEffect }from 'react';
 import Start from'./Start';
 import End from './End'
-import './Quiz.css';
+import './Quiz.scss';
 import Question from './Question';
 import quizData from '../../data/quiz';
 import Modal from './Modal';
 let interval;
 
-const Quiz= () => {
+export default function Quiz () {
   const[ step, setStep] = useState(1);
   const[ activeQuestion, setActiveQuestion] = useState(0);
   const[ answers, setAnswers] = useState([]);
@@ -63,4 +63,3 @@ const Quiz= () => {
   );
 }
 
-export default Quiz;
