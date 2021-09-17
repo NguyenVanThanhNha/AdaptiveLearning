@@ -19,15 +19,17 @@ import {
 import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
-import Quiz from './Components/quiz/Quiz';
+// import Quiz from './Components/quiz/Quiz'
+import Test from './Components/testlearningstyle/Test';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Route exact path="/">
-           <Home/>
-           {/* <Test/> */}
+           {/* <Home/> */}
+           {/* <Quiz/> */}
+           <Test/>
         </Route>
         <Route exact path="/about">
            <About/>
@@ -55,9 +57,6 @@ function App() {
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1">
           <Lesson1/>
-        </Route>
-        <Route exact path="/dashboard/courses/math10/c5l1/test1">
-          <Quiz/>
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1/d1">
           <Slideimg/>
