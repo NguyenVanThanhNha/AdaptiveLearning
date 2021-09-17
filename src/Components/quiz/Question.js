@@ -17,7 +17,7 @@ const Question = ({
     if (findCheckedInput) {
       findCheckedInput.checked = false;
     }
-  }, []);
+  }, [data.question]);
 
   const changeHandler = (e) => {
     setSelected(e.target.value);
@@ -76,5 +76,4 @@ const Question = ({
     </div>
   );
 };
-
 export default Question;

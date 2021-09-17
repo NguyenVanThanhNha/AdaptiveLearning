@@ -57,8 +57,7 @@ label.radio{
 label.radio+.radio{
     margin-left: 0;
 }
-.button{
-    border: solid black;
+.button {
     padding: 15px;
 }
 label.radio input{
