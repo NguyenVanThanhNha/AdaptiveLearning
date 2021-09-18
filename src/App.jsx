@@ -29,10 +29,10 @@ function App() {
         <Route exact path="/">
            {/* <Home/> */}
            {/* <Quiz/> */}
-           <Test/>
+          <Test/>
         </Route>
         <Route exact path="/about">
-           <About/>
+          <About/>
         </Route>
         <Route exact path="/services">
           <Services/>
