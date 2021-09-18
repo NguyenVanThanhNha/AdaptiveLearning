@@ -20,7 +20,7 @@ import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
 // import Quiz from './Components/quiz/Quiz'
-import Test from './Components/testlearningstyle/Test';
+import Test from './Components/testlearningstyle/test';
 
 function App() {
   return (

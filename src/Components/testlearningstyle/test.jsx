@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./testlearningstyle.scss"
+import BarChart from './BarChart'
 
 export default function Test() {
 	const questions = [
@@ -7,21 +8,21 @@ export default function Test() {
 			questionText: 'I understand something better after I',
 			answerOptions: [
 				{ answerText: 'try it out', isCorrect: true },
-				{ answerText: 'think it through', isIncorrect: false },
+				{ answerText: 'think it through', isCorrect: false },
 			],
 		},
 		{
 			questionText: 'I would rather be considered',
 			answerOptions: [
 				{ answerText: 'realistic', isCorrect: true },
-				{ answerText: 'innovative', isIncorrect: false },
+				{ answerText: 'innovative', isCorrect: false },
 			],
 		},
 		{
 			questionText: 'When I think about what I did yesterday, I am most likely to get',
 			answerOptions: [
 				{ answerText: 'a picture', isCorrect: true },
-				{ answerText: 'words', isIncorrect: false },
+				{ answerText: 'words', isCorrect: false },
 			],
 		},
 		{
@@ -35,7 +36,7 @@ export default function Test() {
 			questionText: 'When I am learning something new, it helps me to',
 			answerOptions: [
 				{ answerText: 'talk about it', isCorrect: true },
-				{ answerText: 'think about it', isIncorrect: false },
+				{ answerText: 'think about it', iscorrect: false },
 			],
 		},
 		{
@@ -320,82 +321,134 @@ export default function Test() {
 	const [reflective, setReflective] = useState(0);
 	const [sensing, setSensing] = useState(0);
 	const [retuitive, setRetuitive] = useState(0);
-	const [vissual, setVisual] = useState(0);
+	const [visual, setVisual] = useState(0);
 	const [verbal, setVerbal] = useState(0);
 	const [sequential, setSequential] = useState(0);
 	const [global, setGlobal] = useState(0);
+	sessionStorage.setItem('active', active);
+	sessionStorage.setItem('reflective', reflective);
+	sessionStorage.setItem('sensing', sensing);
+	sessionStorage.setItem('retuitive', retuitive);
+	sessionStorage.setItem('visual', visual);
+	sessionStorage.setItem('verbal', verbal);
+	sessionStorage.setItem('sequential', sequential);
+	sessionStorage.setItem('global', global);
 
 
 	const handleAnswerOptionClick = (isCorrect) => {
-		for(var i=0; i<43; i+=4){
-		if (isCorrect === true && currentQuestion+1 == i) {
+	
+		for(var i=0; i<=44; i+=4){
+	
+		if (isCorrect === true && currentQuestion == i) {
 			setActive(active + 1);
 			setReflective(reflective - 1);
+			sessionStorage.setItem('active', active);
+			sessionStorage.setItem('reflective', reflective);
 		}
-		else if (isCorrect === false && currentQuestion+1 == i) {
+		else if (isCorrect === false && currentQuestion == i) {
 			setReflective(reflective + 1);
 			setActive(active -1);
+			sessionStorage.setItem('active', active);
+			sessionStorage.setItem('reflective', reflective);
 		}
 	}
-	for(var i=1; i<43; i+=4){
-		if (isCorrect === true && currentQuestion+1 == i) {
+	for(var i=1; i<= 44; i=i+4){
+		if (isCorrect === true && currentQuestion == i) {
 			setSensing(sensing + 1);
 			setRetuitive(retuitive - 1);
+			sessionStorage.setItem('sensing', sensing);
+			sessionStorage.setItem('retuitive', retuitive);
 		}
-		else if (isCorrect === false && currentQuestion+1  == i) {
+		else if (isCorrect === false && currentQuestion  == i) {
 			setSensing(sensing - 1);
 			setRetuitive(retuitive + 1);
-		}
+			sessionStorage.setItem('sensing', sensing);
+			sessionStorage.setItem('retuitive', retuitive);
 	} 
-	for(var i=2; i<43; i+=4){
-		if (isCorrect === true && currentQuestion+1 == i) {
-			setVisual(vissual + 1);
+}
+	for(var i=2; i<=44; i+=4){
+		if (isCorrect === true && currentQuestion == i) {
+			setVisual(visual + 1);
 			setVerbal(verbal - 1);
+			sessionStorage.setItem('visual', visual);
+			sessionStorage.setItem('verbal', verbal);
 		}
-		else if (isCorrect === false && currentQuestion+1 == i) {
-			setVisual(vissual - 1);
+		else if (isCorrect === false && currentQuestion == i) {
+			setVisual(visual - 1);
 			setVerbal(verbal + 1);
+			sessionStorage.setItem('visual', visual);
+			sessionStorage.setItem('verbal', verbal);
 		}
 	}
-	for(var i=3; i<44; i+=4){
-		if (isCorrect === true && currentQuestion+1 == i) {
+	for(var i=3; i<=44; i+=4){
+		if (isCorrect === true && currentQuestion == i) {
 			setSequential(sequential + 1);
 			setGlobal(global - 1);
+			sessionStorage.setItem('sequential', sequential);
+			sessionStorage.setItem('global', global);
 		}
-		else if (isCorrect === false && currentQuestion+1 == i) {
+		else if (isCorrect === false && currentQuestion == i) {
 			setSequential(sequential - 1);
 			setGlobal(global + 1);
+			sessionStorage.setItem('sequential', sequential);
+			sessionStorage.setItem('global', global);
 		}
 	}
 	const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
 		} else {
+			checkActive();
+			checkReflective();
+			checkSensing();
+			checkRetuitive();
+			checkVisual();
+			checkVerbal();
+			checkSequential();
+			checkGlobal();
 			setShowScore(true);
-		}	
-		/*checkActive();
-		checkReflective();*/
-	}
-	/*const checkActive = () => {
+	}	
+}
+	const checkActive = () => {
 		if (active < 0){setActive(0)}}
 	const checkReflective = ()=>{
-		if (reflective < 0){setReflective(0)}}*/
+		if (reflective < 0){setReflective(0)}}
+	const checkSensing = ()=>{
+		if (sensing < 0){setSensing(0)}}
+	const checkRetuitive = ()=>{
+		if (retuitive < 0){setRetuitive(0)}}
+	const checkVisual = ()=>{
+		if (visual < 0){setVisual(0)}}
+	const checkVerbal = ()=>{
+		if (verbal < 0){setVerbal(0)}}
+	const checkSequential = ()=>{
+		if (sequential < 0){setSequential(0)}}
+	const checkGlobal = ()=>{
+		if (global < 0){setGlobal(0)}}
 	
-	return (
-		<div className='app'>
-			{showScore ? (
-				<div className='score-section'>
-					You active score:{active}<br></br>
-					You reflective score:{reflective}<br></br>
-					You sensing score:{sensing} <br></br>
-					You retuitive score:{retuitive}<br></br>
-					You visual score:{vissual} <br></br>
-					You verbal score:{verbal} <br></br>
-					You sequential score:{sequential} <br></br>
-					You global score:{global} 
+		const App = () => {
+			return (
+				<div>
+					<BarChart/>
 				</div>
-				
-			) : (
+				)
+			}
+		
+		return (
+			<div className='app'>
+				{showScore ? ( App()
+					/*<div className='score-section'>
+						You active score:{active}<br></br>
+						You reflective score:{reflective}<br></br>
+						You sensing score:{sensing} <br></br>
+						You retuitive score:{retuitive}<br></br>
+						You visual score:{visual} <br></br>
+						You verbal score:{verbal} <br></br>
+						You sequential score:{sequential} <br></br>
+						You global score:{global} 
+					</div>*/
+					
+				) : (
 				<>
 					<div><h1 class = "name">LET'S TEST THE LEARNING STYLE</h1></div>
 					<div className='question-section'>
