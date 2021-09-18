@@ -87,7 +87,7 @@
   justify-content: center;
 }
 
-#btn-testlearningstyle, #btn-end-testlearningstyle {
+.btn-testlearningstyle, .btn-end-testlearningstyle {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
@@ -111,20 +111,20 @@
   background-color: rgb(16, 233, 16);
 }
 
-#btn-testlearningstyle:hover, #btn-end-testlearningstyle:hover {
+.btn-testlearningstyle:hover, .btn-end-testlearningstyle:hover {
   background-color: #E6C376;
 }
 
-#btn-testlearningstyle:focus, #btn-end-testlearningstyle:focus {
+.btn-testlearningstyle:focus, .btn-end-testlearningstyle:focus {
   outline: none;
 }
 
-#btn-testlearningstyle, #btn-end-testlearningstyle svg {
+.btn-testlearningstyle, .btn-end-testlearningstyle svg {
   margin-right: 5px;
 }
 
 
-#btn-end-testlearningstyle {
+.btn-end-testlearningstyle {
   font-size: 30px;
   padding: 20px;
   width: 50%;
@@ -132,4 +132,8 @@
   align-items: center;
   margin-top: 20px;
   margin-left: 25%;
+}
+
+.btn-learning {
+  color: #fff;
 }
