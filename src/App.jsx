@@ -27,12 +27,11 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/">
-           <Home/>
+           <Test/>
            {/* <Quiz/> */}
-           {/* <Test/> */}
         </Route>
         <Route exact path="/about">
-           <About/>
+          <About/>
         </Route>
         <Route exact path="/services">
           <Services/>

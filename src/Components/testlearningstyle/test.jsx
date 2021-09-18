@@ -426,7 +426,7 @@ export default function Test() {
 	const checkGlobal = ()=>{
 		if (global < 0){setGlobal(0)}}
 	
-		const App = () => {
+		const Chart = () => {
 			return (
 				<div>
 					<BarChart/>
@@ -435,19 +435,9 @@ export default function Test() {
 			}
 		
 		return (
+			<div className="root">
 			<div className='app'>
-				{showScore ? ( App()
-					/*<div className='score-section'>
-						You active score:{active}<br></br>
-						You reflective score:{reflective}<br></br>
-						You sensing score:{sensing} <br></br>
-						You retuitive score:{retuitive}<br></br>
-						You visual score:{visual} <br></br>
-						You verbal score:{verbal} <br></br>
-						You sequential score:{sequential} <br></br>
-						You global score:{global} 
-					</div>*/
-					
+				{showScore ? ( Chart()
 				) : (
 				<>
 					<div><h1 class = "name">LET'S TEST THE LEARNING STYLE</h1></div>
@@ -459,11 +449,12 @@ export default function Test() {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button className ="btn-testlearningstyle" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>
 			)}
+		</div>
 		</div>
 	);
 }

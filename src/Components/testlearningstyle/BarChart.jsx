@@ -1,5 +1,6 @@
 import React from "react"
 import { Bar } from 'react-chartjs-2'
+import { Link } from "react-router-dom";
 
 const BarChart = () =>{
     return (
@@ -44,14 +45,13 @@ const BarChart = () =>{
                 ]
             }
 
-            }
-            height={400}
-            width={600}
-            options={{
-                maintainAspectRatio: false,
-                }}
-            />
-        </div>
+        }
+        height={400}
+        width={600}
+        />
+        <h1 class = "end" >Thank you for completing the test, we can now recommend the most suitable lessons for you.<br></br></h1>
+        <div><button className="btn-end-testlearningstyle"><Link className="btn-learning" to= '/learning'>Let's Enjoy!</Link></button></div>
+    </div>
     )
 }
 
