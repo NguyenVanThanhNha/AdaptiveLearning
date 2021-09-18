@@ -1,6 +1,8 @@
 import React from "react"
 import { Bar } from 'react-chartjs-2'
 
+
+
 const BarChart = () =>{
     return (
         <div>
@@ -20,14 +22,14 @@ const BarChart = () =>{
                                 JSON.parse(sessionStorage.getItem('sequential')),
                                 JSON.parse(sessionStorage.getItem('global'))],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(205, 175, 149, 0.2)',
-                            'rgba(106, 90, 205, 0.2)'
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(255, 206, 86, 0.5)',
+                            'rgba(75, 192, 192, 0.5)',
+                            'rgba(153, 102, 255, 0.5)',
+                            'rgba(255, 159, 64, 0.5)',
+                            'rgba(205, 175, 149, 0.5)',
+                            'rgba(106, 90, 205, 0.5)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -38,8 +40,8 @@ const BarChart = () =>{
                             'rgba(255, 159, 64, 1)',
                             'rgba(205, 175, 149, 1)',
                             'rgba(106, 90, 205, 1)'
-
-                        ]
+                        ],
+                        borderWidth: 1,
                     }
                 ]
             }
@@ -47,10 +49,9 @@ const BarChart = () =>{
             }
             height={400}
             width={600}
-            options={{
-                maintainAspectRatio: false,
-                }}
             />
+            <h1 class = "end" >Thank you for completing the test, we can now recommend the most suitable lessons for you.<br></br></h1>
+            <div><button id="btn-end-testlearningstyle">Let's enjoy!</button></div>
         </div>
     )
 }

@@ -15,6 +15,7 @@
     "aws-amplify-react": "^5.0.15",
     "axios": "^0.21.4",
     "bootstrap": "^4.6.0",
+    "chart.js": "^3.5.1",
     "date-fns": "^2.0.0-beta.5",
     "formik": "^2.2.9",
     "formilk": "^0.0.4",
