@@ -15,22 +15,42 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./scss/common.scss";
 import {
   BrowserRouter as Router,
-  Route
+  Route, Switch
 } from "react-router-dom";
 import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
 
+// import Quiz from './Components/quiz/Quiz'
+import Test from './Components/testlearningstyle/test';
+import BeautifulLogin from './widget/BeautifulLogin'
+import PrivateRoute  from './AuthComponent/PrivateRoute'
+import { Redirect } from 'react-router';
+
+import KommunicateChat from './chat';
+
 function App() {
+  const isLoggedIn = Boolean(localStorage.getItem('accessToken'))
+  console.log(isLoggedIn)
   return (
     <div className="App">
       <Router>
         <Route exact path="/">
            <Home/>
-           {/* <Test/> */}
         </Route>
+
+        <Switch>
+          <Route path="/login">
+              <div className="wrapperlogin">
+                <BeautifulLogin />
+              </div>    
+          </Route>
+          <PrivateRoute path="/dashboard">  
+          </PrivateRoute>
+        </Switch>
+
         <Route exact path="/about">
-           <About/>
+          <About/>
         </Route>
         <Route exact path="/services">
           <Services/>
@@ -47,6 +67,9 @@ function App() {
         <Route exact path="/dashboard">
           <Dashboard/>
           </Route>
+        <Route exact path="/dashboard/testlearningstyle">
+          <Test/>
+        </Route>
         <Route exact path="/dashboard/courses">
           <Courses/>
         </Route>
@@ -55,9 +78,6 @@ function App() {
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1">
           <Lesson1/>
-        </Route>
-        <Route exact path="/dashboard/courses/math10/c5l1/test1">
-          <Quiz/>
         </Route>
         <Route exact path="/dashboard/courses/math10/c5l1/d1">
           <Slideimg/>
@@ -73,7 +93,7 @@ function App() {
         </Route>
         
       </Router>
-      {/* <AmplifySignOut buttonText="Custom Text"></AmplifySignOut>    </div> */}
+      <KommunicateChat/>
       </div>
   );
 }

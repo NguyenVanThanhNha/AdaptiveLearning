@@ -3,6 +3,10 @@ import "./headerlearning.scss";
 import siteLogo from "../../images/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { FaTimes} from "react-icons/fa";
+import Amplify, { Auth, Hub, API } from "aws-amplify";
+import awsmobile from '../../aws-exports'
+Amplify.configure(awsmobile);
+
 export default function Index() {
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
@@ -31,7 +35,7 @@ export default function Index() {
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
                                             {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/classes">CLASSES</NavLink></li>
+                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyle">LEARNING STYLE</NavLink></li>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/forum">FORUM</NavLink></li>
                                             <li className="menu-item"><a href="#">MY ACCOUNT</a>
                                                 <ul className="sub-menu">
@@ -39,7 +43,8 @@ export default function Index() {
                                                     <li className="menu-item"><Link to="/blog_details/1">Change Password</Link></li>
                                                 </ul>
                                             </li>
-                                            <li className="menu-item"><Link className="deneb_btn" to="/">LOG OUT</Link></li>
+                                            <li className="menu-item"><Link className="deneb_btn" to="/" onClick={()=> 
+                                                { Auth.signOut(); localStorage.removeItem('accessToken')}}> LOG OUT</Link></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -73,11 +78,12 @@ export default function Index() {
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
                                 {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/classes">CLASSES</NavLink></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyle">LEARNING STYLE</NavLink></li>
                                 <li className="menu-item"><NavLink exact to="/blog">INFORMATION</NavLink></li>
                                 {/* <li className="menu-item"><Link to="/blog_details/1"></Link>MY ACCOUNT</li> */}
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/account">MY ACCOUNT</NavLink></li>
-                                <li className="menu-item"><Link className="deneb_btn" to="/">LOG OUT</Link></li>
+                                {/* <li className="menu-item"><Link className="deneb_btn" to="/">LOG OUT</Link></li> */}
+                                <button href="/login" className="deneb_btn" onClick={()=> { Auth.signOut(); localStorage.removeItem('accessToken')}}> Sign OUT</button>
                                 </ul>
                             </div>
                         </div>

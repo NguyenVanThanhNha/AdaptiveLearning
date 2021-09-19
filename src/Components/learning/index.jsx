@@ -67,23 +67,23 @@ export default function Index() {
                                     <Slider {...settings}>
                                         <div className="sizeimg">
                                             <PortfolioItem
-                                              img={portfolioImg_01}
-                                              title="Math 10"
-                                              tag="Design"
+                                            img={portfolioImg_01}
+                                            title="Math 10"
+                                            tag="Design"
                                             />
                                         </div>
                                         <div className="sizeimg">
                                             <PortfolioItem
-                                              img={portfolioImg_02}
-                                              title="Math 11"
-                                              tag="Design"
+                                            img={portfolioImg_02}
+                                            title="Math 11"
+                                            tag="Design"
                                             />
                                         </div>
                                         <div className="sizeimg">
                                             <PortfolioItem 
-                                             img={portfolioImg_03}
-                                             title="Math 12"
-                                             tag="Design"
+                                            img={portfolioImg_03}
+                                            title="Math 12"
+                                            tag="Design"
                                             />
                                         </div>
                                         <div>
