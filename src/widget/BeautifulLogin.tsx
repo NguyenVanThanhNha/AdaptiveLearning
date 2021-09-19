@@ -1,11 +1,16 @@
-import firebase from 'firebase/compat/app'
 import React, { useEffect, useState } from 'react'
 import Banner from '../AuthComponent/Banner'
 import LoginPage from '../AuthComponent/Pages/LoginPage'
 import ResetPage from '../AuthComponent/Pages/ResetPage'
 import SignupPage from '../AuthComponent/Pages/SignupPage'
+import ConfirmPage from '../AuthComponent/Pages/ConfirmPage' 
 import SocialPage from '../AuthComponent/Pages/SocialPage'
-import { app } from '../config/firebase'
+
+import Amplify, { Auth, Hub, API } from "aws-amplify";
+import awsmobile from '../aws-exports'
+import WelcomePage from '../AuthComponent/Pages/WelcomePage'
+
+Amplify.configure(awsmobile);
 
 interface BeautifulLoginProps {}
 
@@ -22,20 +27,79 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
     show: false,
     type: 'success',
   })
+ 
+  const [user, updateUser] = useState('a')
+ 
+   const checkUser = async () => {
+     try {
+       const user = await Auth.currentAuthenticatedUser();
+        console.log(user)
+       updateUser(user);
+ 
+      //  console.log("got user", user);
+       const accessToken = user.signInUserSession.accessToken.jwtToken;
+       console.log("got user", accessToken);
+       localStorage.setItem('accessToken',accessToken);
+ 
+     } catch (err) {
+       console.log("checkUser error", err);
+     }
+   };
 
-  const mailSignin = async (data: { email: string; password: string }) => {
-    const { email, password } = data
+   const setAuthListener = async () => {
+    Hub.listen("auth", (data) => {
+      switch (data.payload.event) {
+        case "signOut":
+          console.log(data.payload.message);
+          break;
+
+        case "signIn":
+          console.log(data.payload.message);
+          break;
+         default:
+      }
+    });
+  };
+
+   useEffect(() => {
+    checkUser();
+    setAuthListener();
+  }, []);
+
+  const mailSignin = async (data: { username: string; password: string }) => {
+    const { username, password } = data
     try {
-      await app.auth().signInWithEmailAndPassword(email, password)
+      await Auth.signIn({ username, password });
+      setView('welcome')
+      checkUser();
+    
     } catch (error) {
-      // setShowBanner({ message: error.message, show: true, type: 'error' })
     }
   }
 
-  const mailSignUp = async (data: { email: string; password: string }) => {
-    const { email, password } = data
+  const mailSignUp = async (data: {  username: string; email: string; password: string }) => {
+    const { username, email, password } = data
+    updateUser(username)
     try {
-      await app.auth().createUserWithEmailAndPassword(email, password)
+      await Auth.signUp({  username, password, attributes: { email } });
+      setView('confirm');
+      checkUser();
+
+    } catch (error) {
+      setShowBanner({
+        message: "Account already exists",
+        show: true,
+        type: 'error',
+      })
+    }
+  }
+
+  const mailConfirm = async (data: { authCode: string}) => {
+    const { authCode } = data
+    try {
+      console.log(user)
+      await Auth.confirmSignUp( user, authCode );
+      setView('login');
     } catch (error) {
       setShowBanner({
         message: "",
@@ -45,12 +109,24 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
     }
   }
 
-  const socialSignin = async (provider: firebase.auth.AuthProvider) => {
+  const socialSignin = async () => {
     try {
-      await app.auth().signInWithPopup(provider)
+    
     } catch (error) {
       setShowBanner({
-        message:"",
+        message: '',
+        show: true,
+        type: 'error',
+      })
+    }
+  }
+
+  const welcomePage = async () => {
+    try {
+    
+    } catch (error) {
+      setShowBanner({
+        message: '',
         show: true,
         type: 'error',
       })
@@ -60,7 +136,7 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
   const resetPassword = async (data: { email: string }) => {
     const { email } = data
     try {
-      await app.auth().sendPasswordResetEmail(email)
+      
       setShowBanner({
         message: 'Check your email and follow the steps to reset your password',
         show: true,
@@ -81,8 +157,12 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
         return <LoginPage handleView={setView} mailSignin={mailSignin} />
       case 'signup':
         return <SignupPage handleView={setView} mailSignUp={mailSignUp} />
+      case 'confirm':
+        return <ConfirmPage handleView={setView} mailConfirm={mailConfirm}/>
       case 'social':
         return <SocialPage handleView={setView} socialSignin={socialSignin} />
+      case 'welcome':
+        return <WelcomePage handleView={setView} welcomePage={welcomePage}/>
       default:
         return <ResetPage handleView={setView} resetPassword={resetPassword} />
     }

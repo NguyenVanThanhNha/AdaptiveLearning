@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 import Amplify from '@aws-amplify/core'
 import { Auth } from '@aws-amplify/auth'
 import awsconfig from './aws-exports'
-import AuthApp from './AuthApp'
 
 Amplify.configure(awsconfig)
 Auth.configure(awsconfig)

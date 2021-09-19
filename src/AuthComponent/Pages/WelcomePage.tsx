@@ -8,60 +8,40 @@ import { TextSubtitle, TextTitle } from '../Styles/TextStyles'
 import loginIllustration from '../../assets/illustrations/login.svg'
 import InlineLink from '../InlineLink'
 import Card from '../Cards/Card'
+import { Link }  from "react-router-dom";
+
 
 interface LoginPageProps {
   handleView: React.Dispatch<React.SetStateAction<string>>
-  mailSignin: (data: { username: string; password: string }) => Promise<void>
+  welcomePage: (data: { email: string; password: string }) => Promise<void>
 }
 
 const validationSchema = yup.object({
-  username: yup.string().required().max(255),
+  email: yup.string().required().max(255),
   password: yup.string().required().min(8),
 })
 
-const LoginPage: React.FC<LoginPageProps> = ({ handleView, mailSignin }) => (
+const WelcomePage: React.FC<LoginPageProps> = ({ handleView, welcomePage }) => (
   <Card alt="login page" imageSrc={loginIllustration}>
     <Formik
-      initialValues={{ username: '', password: '' }}
+      initialValues={{ email: '', password: '' }}
       validationSchema={validationSchema}
       onSubmit={(data, { setSubmitting, resetForm }) => {
         setSubmitting(true)
-        mailSignin(data)
-        setSubmitting(false)
-        resetForm()
+        welcomePage(data)
+
       }}
     >
       {({ values, isSubmitting }) => (
         <Form>
           <LeftContainer>
             <TextContainer>
-              <Title>Log in</Title>
+              <Title>Welcome my FRIEND!</Title>
               <Subtitle>It&apos;s great to have you back.</Subtitle>
             </TextContainer>
-            <InputContainer>
-              <Field name="username" label="User name" type="text" as={Input} />
-              <Field name="password" label="Password" type="password" as={Input} />
-            </InputContainer>
             <ButtonContainer>
-              <Button text="Log in" disabled={isSubmitting} type="submit" />
+              <li className="menu-item"><Link className="deneb_btn" to="/dashboard">Learn Now</Link></li>
             </ButtonContainer>
-            <ExtraContainer>
-              <InlineLink
-                text="Log in with social media?"
-                textLink="Social log in"
-                handleView={() => handleView('social')}
-              />
-              <InlineLink
-                text="Don't have an account?"
-                textLink="Sign up!"
-                handleView={() => handleView('signup')}
-              />
-              <InlineLink
-                text="Forgot your password?"
-                textLink="Reset password"
-                handleView={() => handleView('reset')}
-              />
-            </ExtraContainer>
           </LeftContainer>
         </Form>
       )}
@@ -69,6 +49,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ handleView, mailSignin }) => (
   </Card>
 )
 
+      
 const LeftContainer = styled.div`
   align-content: center;
   display: grid;
@@ -100,4 +81,4 @@ const ExtraContainer = styled.div`
   grid-template-rows: repeat(2, min-content);
 `
 
-export default LoginPage
+export default WelcomePage

@@ -11,18 +11,19 @@ import Card from '../Cards/Card'
 
 interface SignupPageProps {
   handleView: React.Dispatch<React.SetStateAction<string>>
-  mailSignUp: (data: { email: string; password: string }) => Promise<void>
+  mailSignUp: (data: { username: string; email: string;  password: string }) => Promise<void>
 }
 
 const validationSchema = yup.object({
   email: yup.string().required().max(255),
+  username: yup.string().required().max(255),
   password: yup.string().required().min(8),
 })
 
 const SignupPage: React.FC<SignupPageProps> = ({ handleView, mailSignUp }) => (
   <Card alt="signup page" imageSrc={signupIllustration}>
     <Formik
-      initialValues={{ email: '', password: '' }}
+      initialValues={{  username: '', email: '', password: '' }}
       validationSchema={validationSchema}
       onSubmit={(data, { setSubmitting, resetForm }) => {
         setSubmitting(true)
@@ -39,6 +40,7 @@ const SignupPage: React.FC<SignupPageProps> = ({ handleView, mailSignUp }) => (
               <Subtitle>And start coding now.</Subtitle>
             </TextContainer>
             <InputContainer>
+              <Field name="username" label="Username" type="text" as={Input}/>
               <Field name="email" label="Email Address" type="email" as={Input} />
               <Field name="password" label="Password" type="password" as={Input} />
             </InputContainer>

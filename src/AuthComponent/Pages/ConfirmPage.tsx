@@ -11,22 +11,21 @@ import Card from '../Cards/Card'
 
 interface LoginPageProps {
   handleView: React.Dispatch<React.SetStateAction<string>>
-  mailSignin: (data: { username: string; password: string }) => Promise<void>
+  mailConfirm: (data: {authCode: string }) => Promise<void>
 }
 
 const validationSchema = yup.object({
-  username: yup.string().required().max(255),
-  password: yup.string().required().min(8),
+  authCode: yup.string().required().min(6),
 })
 
-const LoginPage: React.FC<LoginPageProps> = ({ handleView, mailSignin }) => (
-  <Card alt="login page" imageSrc={loginIllustration}>
+const ConfirmPage: React.FC<LoginPageProps> = ({ handleView, mailConfirm }) => (
+  <Card alt="Confirm page" imageSrc={loginIllustration}>
     <Formik
-      initialValues={{ username: '', password: '' }}
+      initialValues={{ authCode: ''}}
       validationSchema={validationSchema}
       onSubmit={(data, { setSubmitting, resetForm }) => {
         setSubmitting(true)
-        mailSignin(data)
+        mailConfirm(data)
         setSubmitting(false)
         resetForm()
       }}
@@ -35,15 +34,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ handleView, mailSignin }) => (
         <Form>
           <LeftContainer>
             <TextContainer>
-              <Title>Log in</Title>
-              <Subtitle>It&apos;s great to have you back.</Subtitle>
+              <Title>Confirm</Title>
+              <Subtitle>Confirm your mail.</Subtitle>
             </TextContainer>
             <InputContainer>
-              <Field name="username" label="User name" type="text" as={Input} />
-              <Field name="password" label="Password" type="password" as={Input} />
+              <Field name="authCode" label="authCode" type="text" as={Input} />
             </InputContainer>
             <ButtonContainer>
-              <Button text="Log in" disabled={isSubmitting} type="submit" />
+              <Button text="Confirm" disabled={isSubmitting} type="submit" />
             </ButtonContainer>
             <ExtraContainer>
               <InlineLink
@@ -100,4 +98,4 @@ const ExtraContainer = styled.div`
   grid-template-rows: repeat(2, min-content);
 `
 
-export default LoginPage
+export default ConfirmPage

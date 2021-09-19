@@ -4,7 +4,6 @@ import Card from '../Cards/Card'
 import socialIllustration from '../../assets/illustrations/social.svg'
 import { TextSubtitle, TextTitle } from '../Styles/TextStyles'
 import InlineLink from '../InlineLink'
-import { googleAuthProvider, githubAuthProvider } from '../../config/firebase'
 import GoogleButton from '../Buttons/GoogleButton'
 import GithubButton from '../Buttons/GithubButton'
 
@@ -21,8 +20,8 @@ const SocialPage: React.FC<SocialPageProps> = ({ handleView, socialSignin }) => 
         <Subtitle>Use your social accounts to log in.</Subtitle>
       </TextContainer>
       <ButtonContainer>
-        <GoogleButton onClick={() => socialSignin(googleAuthProvider)} />
-        <GithubButton onClick={() => socialSignin(githubAuthProvider)} />
+        <GoogleButton onClick={() => socialSignin} />
+        <GithubButton onClick={() => socialSignin} />
       </ButtonContainer>
       <ExtraContainer>
         <InlineLink

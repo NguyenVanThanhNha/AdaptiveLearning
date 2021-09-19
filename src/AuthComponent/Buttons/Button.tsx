@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { TextDark } from '../Styles/TextStyles'
 
+
 interface ButtonProps {
   disabled?: boolean
   onClick?: () => void
@@ -14,7 +15,7 @@ interface WrapperProps {
   type?: 'button' | 'submit' | 'reset' | undefined
 }
 
-const Button: React.FC<ButtonProps> = ({ disabled = false, onClick, text, type }) => (
+const Button: React.FC<ButtonProps> = ({ disabled = false, onClick, text, type}) => (
   <Wrapper type={type} disabled={disabled} onClick={onClick} tabIndex={0}>
     <Text>{text}</Text>
   </Wrapper>
