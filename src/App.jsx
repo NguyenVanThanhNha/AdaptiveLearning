@@ -21,6 +21,7 @@ import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
 // import Quiz from './Components/quiz/Quiz'
 import Test from './Components/testlearningstyle/test';
+import AuthApp from './AuthApp';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         <Route exact path="/">
            <Test/>
            {/* <Quiz/> */}
+        </Route>
+        <Route exact path="/auth">
+           <AuthApp/>
         </Route>
         <Route exact path="/about">
           <About/>
