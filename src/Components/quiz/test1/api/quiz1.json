@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "question": "Find the sum of <code class='inlinecode'>11 + 22 + 33</code>",
+        "answers": [
+            {
+                "option": "a",
+                "text": "70"
+            },
+            {
+                "option": "b",
+                "text": "66"
+            },
+            {
+                "option": "c",
+                "text": "77"
+            },
+            {
+                "option": "d",
+                "text": "76"
+            }
+        ],
+        "correct_answer": "b"
+    },
+    {
+        "id": 2,
+        "question": "Subtract <code class='inlinecode'>457</code> from <code class='inlinecode'>832</code>",
+        "answers": [
+            {
+                "option": "a",
+                "text": "375"
+            },
+            {
+                "option": "b",
+                "text": "365"
+            },
+            {
+                "option": "c",
+                "text": "355"
+            },
+            {
+                "option": "d",
+                "text": "345"
+            }
+        ],
+        "correct_answer": "a"
+    },
+    {
+        "id": 3,
+        "question": "Find the product of <code class='inlinecode'>72 × 3</code>",
+        "answers": [
+            {
+                "option": "a",
+                "text": "106"
+            },
+            {
+                "option": "b",
+                "text": "206"
+            },
+            {
+                "option": "c",
+                "text": "216"
+            },
+            {
+                "option": "d",
+                "text": "116"
+            }
+        ],
+        "correct_answer": "c"
+    }
+]

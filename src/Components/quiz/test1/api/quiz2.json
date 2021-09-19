@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "Which of the following is the outcome of below Java code",
+        "code": [
+            "public class Example { ",
+            "   public static void main(String args[]){",
+            "      System.out.println(5+9);",
+            "   }",
+            " }"
+        ],
+        "answers": [
+            {
+                "option": "a",
+                "text": "14"
+            },
+            {
+                "option": "b",
+                "text": "5+9"
+            },
+            {
+                "option": "c",
+                "text": "Compile time error"
+            },
+            {
+                "option": "d",
+                "text": "\"5+9\""
+            }
+        ],
+        "correct_answer": "a"
+    },
+    {
+        "id": 2,
+        "question": "What is the default value of byte variable?",
+        "answers": [
+            {
+                "option": "a",
+                "text": "0.0"
+            },
+            {
+                "option": "b",
+                "text": "0"
+            },
+            {
+                "option": "c",
+                "text": "null"
+            },
+            {
+                "option": "d",
+                "text": "undefined"
+            }
+        ],
+        "correct_answer": "b"
+    },
+    {
+        "id": 3,
+        "question": "What will be output of  x in following code?",
+        "code": [
+            "class Test { ",
+            "   public static void main(String[] args) {",
+            "       int x = 1;",
+            "       if (x == 1){",
+            "           x = x + 1 ",
+            "       }",
+            "   }",
+            "}"
+        ],
+        "answers": [
+            {
+                "option": "a",
+                "text": "0"
+            },
+            {
+                "option": "b",
+                "text": "1"
+            },
+            {
+                "option": "c",
+                "text": "2"
+            },
+            {
+                "option": "d",
+                "text": "3"
+            }
+        ],
+        "correct_answer": "c"
+    },
+    {
+        "id": 4,
+        "question": "Which of the following is the outcome of below Java code?",
+        "image":"quiz.png",
+        "answers": [
+            {
+                "option": "a",
+                "text": "It won't  <code class='inlinecode'>compile</code>"
+            },
+            {
+                "option": "b",
+                "text": "React  Quiz"
+            },
+            {
+                "option": "c",
+                "text": "React, Quiz"
+            },
+            {
+                "option": "d",
+                "text": "<code class='inlinecode'>\"React \" + \" Quiz\"</code>"
+            }
+        ],
+        "correct_answer": "b"
+    }
+]
