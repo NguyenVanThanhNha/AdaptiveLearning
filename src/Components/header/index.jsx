@@ -48,7 +48,7 @@ export default function Index() {
                                                 </ul>
                                             </li>
                                             {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact">Forum</NavLink></li> */}
-                                            <li className="menu-item"><Link className="deneb_btn" to="/dashboard">Learn Now</Link></li>
+                                            <li className="menu-item"><a className="deneb_btn" href="/dashboard">Learn now</a></li>
                                             {/* <li className="menu-item"> <AmplifySignOut className="deneb_btn"/></li> */}
                                             {/* <button
                                                 onClick={signOut}>

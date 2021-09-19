@@ -435,6 +435,7 @@ export default function Test() {
 			}
 		
 		return (
+			<div className="root">
 			<div className='app'>
 				{showScore ? ( Chart()
 				) : (
@@ -453,6 +454,7 @@ export default function Test() {
 					</div>
 				</>
 			)}
+		</div>
 		</div>
 	);
 }

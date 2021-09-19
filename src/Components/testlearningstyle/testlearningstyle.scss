@@ -2,7 +2,7 @@
 
 
 
-#root {
+.root {
   background-color: #7cc6fe;
   display: flex;
   justify-content: center;
@@ -111,15 +111,15 @@
   background-color: rgb(16, 233, 16);
 }
 
-.btn-testlearningstyle:hover, .btn-end-testlearningstyle:hover {
+.btn-testlearningstyle:hover, #btn-end-testlearningstyle:hover {
   background-color: #E6C376;
 }
 
-.btn-testlearningstyle:focus, .btn-end-testlearningstyle:focus {
+.btn-testlearningstyle:focus, #btn-end-testlearningstyle:focus {
   outline: none;
 }
 
-.btn-testlearningstyle, .btn-end-testlearningstyle svg {
+.btn-testlearningstyle, #btn-end-testlearningstyle svg {
   margin-right: 5px;
 }
 

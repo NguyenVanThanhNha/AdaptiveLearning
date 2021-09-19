@@ -13,6 +13,7 @@
 	margin: 0;
 	padding: 0;
 	outline: 0;
+	font-size: 100%;
 }
 html{
 	font-size: 100%;
@@ -186,5 +187,25 @@ input.form_control{
     opacity: 0;
   }
 }
+
+.wrapperlogin{
+  align-content: center;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background: radial-gradient(
+      218.51% 281.09% at 100% 100%,
+      rgba(41, 128, 185, 0.5) 0%,
+      rgba(109, 213, 250, 0.3) 45.83%,
+      rgba(255, 255, 255, 0.2) 100%
+    ),
+    url("../assets/img/background-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 
