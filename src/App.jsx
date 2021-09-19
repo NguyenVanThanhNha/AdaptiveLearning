@@ -21,6 +21,9 @@ import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
 // import Quiz from './Components/quiz/Quiz'
 import Test from './Components/testlearningstyle/test';
+import Quiz from './Components/quiz/Quiz';
+import KommunicateChat from './chat';
+
 
 function App() {
   return (
@@ -73,6 +76,7 @@ function App() {
         
       </Router>
       {/* <AmplifySignOut buttonText="Custom Text"></AmplifySignOut>    </div> */}
+      <KommunicateChat/>
       </div>
   );
 }
