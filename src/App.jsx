@@ -10,6 +10,7 @@ import Dashboard from './Pages/dashboard';
 import Courses from './Pages/courses'
 import Lessons from './Pages/lessons'
 import Math10 from './Pages/math10'
+import Quiz from './Components/quiz/test1/Quiz_Test'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./scss/common.scss";
 import {
@@ -18,6 +19,8 @@ import {
 } from "react-router-dom";
 import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
+import { Slide } from '@material-ui/core';
+
 // import Quiz from './Components/quiz/Quiz'
 import Test from './Components/testlearningstyle/test';
 import BeautifulLogin from './widget/BeautifulLogin'
