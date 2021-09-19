@@ -1,8 +1,8 @@
 {
   "paths": [
     {
-      "name": "/hello",
-      "lambdaFunction": "reactrestauth",
+      "name": "/items",
+      "lambdaFunction": "todosLambda",
       "privacy": {
         "protected": true,
         "auth": [
@@ -16,14 +16,14 @@
           "/GET"
         ]
       },
-      "policyResourceName": "/hello"
+      "policyResourceName": "/items"
     }
   ],
-  "resourceName": "reactrestauthapi",
-  "apiName": "reactrestauthapi",
+  "resourceName": "todosApi",
+  "apiName": "todosApi",
   "functionArns": [
     {
-      "lambdaFunction": "reactrestauth"
+      "lambdaFunction": "todosLambda"
     }
   ],
   "privacy": {
@@ -35,7 +35,7 @@
   "dependsOn": [
     {
       "category": "function",
-      "resourceName": "reactrestauth",
+      "resourceName": "todosLambda",
       "attributes": [
         "Name",
         "Arn"

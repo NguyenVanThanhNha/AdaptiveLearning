@@ -7,7 +7,8 @@
 
  import React, { useEffect, useState } from "react";
 
- import Amplify, { Auth, Hub } from "aws-amplify";
+ import Amplify, { Auth, Hub, API } from "aws-amplify";
+ import { withAuthenticator } from '@aws-amplify/ui-react'
  import awsmobile from './aws-exports'
 import Clock from "./components/loginForm/Clock";
  
@@ -98,9 +99,21 @@ import Clock from "./components/loginForm/Clock";
  
      updateFormState(() => ({ ...formState, formType: "signedIn" }));
    };
+
+   async function callApi() {
+    const user = await Auth.currentAuthenticatedUser()
+    const token = user.signInUserSession.idToken.jwtToken
+    const requestData = {
+      headers: {
+        Authorization: token
+      }
+    }
+    const data = await API.get('reactrestauthapi', '/hello', requestData)
+    console.log("data: ", data)
+  }
  
    // console.log(formType);
- 
+  
    return (
      <>
        <h1>App</h1>
@@ -184,8 +197,11 @@ import Clock from "./components/loginForm/Clock";
            >
              Sign out
            </button>
+           <button onClick={callApi}>Call API</button>
          </div>
        )}
+
+       
  
        <hr />
      </>
