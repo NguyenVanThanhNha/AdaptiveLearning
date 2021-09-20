@@ -40,36 +40,36 @@ function Carousel({
   }
 
   //Start the automatic change of slide
-  useEffect(() => {
-    if (automatic) {
-      var index = slide;
-      const interval = setInterval(() => {
-        if (!isPaused) {
+  // useEffect(() => {
+  //   if (automatic) {
+  //     var index = slide;
+  //     const interval = setInterval(() => {
+  //       if (!isPaused) {
 
-          setSlide(index);
-          index++;
-          if (index >= data.length)
-            index = 0;
-          if (index < 0)
-            index = data.length - 1;
-        }
-      }, time ? time : 2000);
-      return () => { clearInterval(interval); };
-    }
+  //         setSlide(index);
+  //         index++;
+  //         if (index >= data.length)
+  //           index = 0;
+  //         if (index < 0)
+  //           index = data.length - 1;
+  //       }
+  //     }, time ? time : 2000);
+  //     return () => { clearInterval(interval); };
+  //   }
 
-  }, [isPaused, change]);
+  // }, [isPaused, change]);
 
-  function scrollTo(el) {
-    const elLeft = el.offsetLeft + el.offsetWidth;
-    const elParentLeft = el.parentNode.offsetLeft + el.parentNode.offsetWidth;
+  // function scrollTo(el) {
+  //   const elLeft = el.offsetLeft + el.offsetWidth;
+  //   const elParentLeft = el.parentNode.offsetLeft + el.parentNode.offsetWidth;
 
-    // check if element not in view
-    if (elLeft >= elParentLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scroll({ left: elLeft - elParentLeft, behavior: 'smooth' })
-    } else if (elLeft <= el.parentNode.offsetLeft + el.parentNode.scrollLeft) {
-      el.parentNode.scroll({ left: el.offsetLeft - el.parentNode.offsetLeft, behavior: 'smooth' })
-    }
-  }
+  //   // check if element not in view
+  //   if (elLeft >= elParentLeft + el.parentNode.scrollLeft) {
+  //     el.parentNode.scroll({ left: elLeft - elParentLeft, behavior: 'smooth' })
+  //   } else if (elLeft <= el.parentNode.offsetLeft + el.parentNode.scrollLeft) {
+  //     el.parentNode.scroll({ left: el.offsetLeft - el.parentNode.offsetLeft, behavior: 'smooth' })
+  //   }
+  // }
 
   //Listens to slide state changes
   useEffect(() => {
@@ -83,23 +83,23 @@ function Carousel({
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace("active", "");
     }
     //If thumbnails are enabled
-    if (thumbnails) {
-      var thumbnailsArray = document.getElementsByClassName("thumbnail");
-      for (i = 0; i < thumbnailsArray.length; i++) {
-        thumbnailsArray[i].className = thumbnailsArray[i].className.replace(" active-thumbnail", "");
-      }
-      if (thumbnailsArray[slideIndex] !== undefined)
-        thumbnailsArray[slideIndex].className += " active-thumbnail";
-      scrollTo(document.getElementById(`thumbnail-${slideIndex}`));
-    }
+    // if (thumbnails) {
+    //   var thumbnailsArray = document.getElementsByClassName("thumbnail");
+    //   for (i = 0; i < thumbnailsArray.length; i++) {
+    //     thumbnailsArray[i].className = thumbnailsArray[i].className.replace(" active-thumbnail", "");
+    //   }
+    //   if (thumbnailsArray[slideIndex] !== undefined)
+    //     thumbnailsArray[slideIndex].className += " active-thumbnail";
+    //   // scrollTo(document.getElementById(`thumbnail-${slideIndex}`));
+    // }
 
     if (slides[slideIndex] !== undefined)
       slides[slideIndex].style.display = "block";
     if (dots[slideIndex] !== undefined)
-      dots[slideIndex].className += " active";
+      dots[slideIndex].className += "active";
   }, [slide, isPaused]);
 
   return (
@@ -131,26 +131,26 @@ function Carousel({
                       maxWidth: width ? width : "600px",
                       maxHeight: height ? height : "400px"
                     }}
-                    onMouseDown={e => {
-                      automatic &&
-                        setIsPaused(true);
-                    }}
-                    onMouseUp={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
-                    onMouseLeave={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
-                    onTouchStart={e => {
-                      automatic &&
-                        setIsPaused(true);
-                    }}
-                    onTouchEnd={e => {
-                      automatic &&
-                        setIsPaused(false);
-                    }}
+                    // onMouseDown={e => {
+                    //   automatic &&
+                    //     setIsPaused(true);
+                    // }}
+                    // onMouseUp={e => {
+                    //   automatic &&
+                    //     setIsPaused(false);
+                    // }}
+                    // onMouseLeave={e => {
+                    //   automatic &&
+                    //     setIsPaused(false);
+                    // }}
+                    // onTouchStart={e => {
+                    //   automatic &&
+                    //     setIsPaused(true);
+                    // }}
+                    // onTouchEnd={e => {
+                    //   automatic &&
+                    //     setIsPaused(false);
+                    // }}
                     key={index}>
                     {slideNumber &&
                       <div className="slide-number" style={slideNumberStyle}>{index + 1} / {data.length}</div>
@@ -160,11 +160,11 @@ function Carousel({
                       objectFit: slideImageFit ? slideImageFit : "cover",
                     }}
                     />
-                    {isPaused &&
+                    {/* {isPaused &&
                       <div className="pause-icon pause" style={{
                         color: pauseIconColor ? pauseIconColor : "white",
                         fontSize: pauseIconSize ? pauseIconSize : "40px"
-                      }}>II</div>}
+                      }}>II</div>} */}
                     <div className={`carousel-caption-${captionPosition ? captionPosition : "bottom"}`} style={captionStyle} dangerouslySetInnerHTML={{ __html: item.caption }}></div>
 
                   </div>

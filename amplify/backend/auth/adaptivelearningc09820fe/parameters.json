@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "adaptivelearning7eb9e81f_identitypool_7eb9e81f",
+    "identityPoolName": "adaptivelearningc09820fe_identitypool_c09820fe",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "adapti7eb9e81f",
-    "userPoolName": "adaptivelearning7eb9e81f_userpool_7eb9e81f",
+    "resourceNameTruncated": "adaptic09820fe",
+    "userPoolName": "adaptivelearningc09820fe_userpool_c09820fe",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "adapti7eb9e81f_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "adaptic09820fe_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "7eb9e81f",
-    "resourceName": "adaptivelearning7eb9e81f",
+    "sharedId": "c09820fe",
+    "resourceName": "adaptivelearningc09820fe",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
