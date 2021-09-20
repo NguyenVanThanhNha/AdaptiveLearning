@@ -3,10 +3,10 @@
 
 const awsmobile = {
     "aws_project_region": "ap-southeast-1",
-    "aws_cognito_identity_pool_id": "ap-southeast-1:9afbfd36-f4bf-4fc9-8679-650acee176f0",
+    "aws_cognito_identity_pool_id": "ap-southeast-1:73b2347a-0646-4f35-bfc7-3dcf3ceb5591",
     "aws_cognito_region": "ap-southeast-1",
-    "aws_user_pools_id": "ap-southeast-1_qxUkbET0j",
-    "aws_user_pools_web_client_id": "3fdfr3hrfhclpmsgj3qd2k31ij",
+    "aws_user_pools_id": "ap-southeast-1_Zi1Cpvxoq",
+    "aws_user_pools_web_client_id": "12jku9ok6l9ta3hmr6iauk0bfm",
     "oauth": {},
     "aws_cognito_login_mechanisms": [
         "EMAIL"
@@ -21,7 +21,24 @@ const awsmobile = {
     "aws_cognito_password_protection_settings": {
         "passwordPolicyMinLength": 8,
         "passwordPolicyCharacters": []
-    }
+    },
+    "aws_cognito_verification_mechanisms": [
+        "EMAIL"
+    ],
+    "aws_dynamodb_all_tables_region": "ap-southeast-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "usertable-staging",
+            "region": "ap-southeast-1"
+        }
+    ],
+    "aws_cloud_logic_custom": [
+        {
+            "name": "userapi",
+            "endpoint": "https://5udeqar93d.execute-api.ap-southeast-1.amazonaws.com/staging",
+            "region": "ap-southeast-1"
+        }
+    ]
 };
 
 
