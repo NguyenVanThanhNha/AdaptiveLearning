@@ -25,7 +25,7 @@ import BeautifulLogin from './widget/BeautifulLogin'
 import PrivateRoute  from './AuthComponent/PrivateRoute'
 
 import KommunicateChat from './chat';
-import BarChart from './Components/testlearningstyle/BarChart';
+import BarChartResult from './Components/testlearningstyle/BarChartResult';
 
 function App() {
   const isLoggedIn = Boolean(localStorage.getItem('accessToken'))
@@ -66,7 +66,7 @@ function App() {
           <TestLearningStyle/>
         </Route>
         <Route exact path="/dashboard/testlearningstyleresult">
-          <BarChart/>
+          <BarChartResult/>
         </Route>
         <Route exact path="/dashboard/courses">
           <Courses/>
