@@ -35,7 +35,7 @@ export default function Index() {
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
                                             {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
-                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyle">LEARNING STYLE</NavLink></li>
+                                            <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyleresult">LEARNING STYLE</NavLink></li>
                                             <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/forum">FORUM</NavLink></li>
                                             <li className="menu-item"><a href="#">MY ACCOUNT</a>
                                                 <ul className="sub-menu">
@@ -44,7 +44,7 @@ export default function Index() {
                                                 </ul>
                                             </li>
                                             <li className="menu-item"><Link className="deneb_btn" to="/" onClick={()=> 
-                                                { Auth.signOut(); localStorage.removeItem('accessToken')}}> LOG OUT</Link></li>
+                                                { Auth.signOut(); localStorage.removeItem('accessToken'); localStorage.removeItem('firstLogin')}}> LOG OUT</Link></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -78,12 +78,12 @@ export default function Index() {
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/">HOME</NavLink></li>
                                 {/* <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/lessons">LESSONS</NavLink></li> */}
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/courses">COURSES</NavLink></li>
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyle">LEARNING STYLE</NavLink></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/dashboard/testlearningstyleresult">LEARNING STYLE</NavLink></li>
                                 <li className="menu-item"><NavLink exact to="/blog">INFORMATION</NavLink></li>
                                 {/* <li className="menu-item"><Link to="/blog_details/1"></Link>MY ACCOUNT</li> */}
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/account">MY ACCOUNT</NavLink></li>
                                 {/* <li className="menu-item"><Link className="deneb_btn" to="/">LOG OUT</Link></li> */}
-                                <button href="/login" className="deneb_btn" onClick={()=> { Auth.signOut(); localStorage.removeItem('accessToken')}}> Sign OUT</button>
+                                <button href="/login" className="deneb_btn" onClick={()=> { Auth.signOut(); localStorage.removeItem('accessToken'); localStorage.removeItem('firstLogin')}}> Sign OUT</button>
                                 </ul>
                             </div>
                         </div>

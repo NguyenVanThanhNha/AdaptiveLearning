@@ -2,7 +2,6 @@ import React from 'react';
 import Home from "./Pages/home";
 import About from "./Pages/about";
 import Services from "./Pages/services";
-import Learning from "./Pages/learning";
 import Blog from "./Pages/blog";
 import Contact from "./Pages/contact";
 import BlogDetails from "./Pages/blog_details";
@@ -19,15 +18,14 @@ import {
 } from "react-router-dom";
 import Lesson1 from './Components/m10lesson1/index';
 import  Slideimg  from './Components/slideimg/slideimg';
-import { Slide } from '@material-ui/core';
 
 // import Quiz from './Components/quiz/Quiz'
-import Test from './Components/testlearningstyle/test';
+import TestLearningStyle from './Components/testlearningstyle/TestLearningStyle';
 import BeautifulLogin from './widget/BeautifulLogin'
 import PrivateRoute  from './AuthComponent/PrivateRoute'
-import { Redirect } from 'react-router';
 
 import KommunicateChat from './chat';
+import BarChart from './Components/testlearningstyle/BarChart';
 
 function App() {
   const isLoggedIn = Boolean(localStorage.getItem('accessToken'))
@@ -55,9 +53,6 @@ function App() {
         <Route exact path="/services">
           <Services/>
         </Route>
-        <Route exact path="/learning">
-          <Learning/>
-        </Route>
         <Route exact path="/blog">
           <Blog/>
         </Route>
@@ -68,7 +63,10 @@ function App() {
           <Dashboard/>
           </Route>
         <Route exact path="/dashboard/testlearningstyle">
-          <Test/>
+          <TestLearningStyle/>
+        </Route>
+        <Route exact path="/dashboard/testlearningstyleresult">
+          <BarChart/>
         </Route>
         <Route exact path="/dashboard/courses">
           <Courses/>
