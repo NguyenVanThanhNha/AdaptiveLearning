@@ -82,6 +82,7 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
     updateUser(username)
     try {
       await Auth.signUp({  username, password, attributes: { email } });
+      localStorage.setItem('firstLogin', '1')
       setView('confirm');
       checkUser();
 

@@ -82,6 +82,9 @@ function App() {
         <Route exact path="/dashboard/courses/math10/c5l1/d1">
           <Slideimg/>
         </Route>
+        <Route exact path="/dashboard/courses/math10/c5l1/test1">
+          <Quiz/>
+        </Route>
         <Route exact path="/dashboard/lessons">
           <Lessons/>
         </Route>
