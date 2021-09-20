@@ -13,7 +13,13 @@
     },
     "categories": {
       "auth": {
-        "adaptivelearning7eb9e81f": {}
+        "adaptivelearningc09820fe": {}
+      },
+      "function": {
+        "userFunction": {
+          "deploymentBucketName": "amplify-amplify3436fee995da4-staging-82302-deployment",
+          "s3Key": "amplify-builds/userFunction-4b7333486b5143554a55-build.zip"
+        }
       }
     }
   }
