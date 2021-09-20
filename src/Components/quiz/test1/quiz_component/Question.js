@@ -54,7 +54,7 @@ function Question() {
                             </div>
                         }
                         {question.image &&
-                            <img className="Image" alt='' src={images[`${question.image}`]} />}
+                            <img className="Image" alt='' src={images[`${question.image}`].default} />}
                         <RadioGroup aria-label="answer" name="answers" value={currentAnswer} onChange={handleChange}>
                             {question.answers.map((a, i) => (
                                 <Answer

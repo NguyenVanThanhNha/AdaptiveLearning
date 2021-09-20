@@ -24,10 +24,10 @@ export default function LearningTabMath10() {
     return (
         <div className="deneb_project project_v2 section_padding">
             <div className="container">
-                <SectionTitle
+                {/* <SectionTitle
                     title="Continue to build intellectual power"
                     description="When unknow printer took a gallery of type and scramblted it to make a type specimen book"
-                />
+                /> */}
                 <Tab.Container id="left-tabs-example" defaultActiveKey="design">
                     <div className="row">
                         <div className="col-md-12">
