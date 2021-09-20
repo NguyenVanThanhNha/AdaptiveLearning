@@ -100,6 +100,7 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
     try {
       console.log(user)
       await Auth.confirmSignUp( user, authCode );
+      console.log("confirm ok")
       setView('login');
     } catch (error) {
       setShowBanner({
