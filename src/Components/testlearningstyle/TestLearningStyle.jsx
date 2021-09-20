@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./testlearningstyle.scss"
 import BarChart from './BarChart'
 
-export default function Test() {
+export default function TestLearningStyle() {
 	const questions = [
 		{
 			questionText: 'I understand something better after I',

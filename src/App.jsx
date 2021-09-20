@@ -22,7 +22,7 @@ import  Slideimg  from './Components/slideimg/slideimg';
 import { Slide } from '@material-ui/core';
 
 // import Quiz from './Components/quiz/Quiz'
-import Test from './Components/testlearningstyle/test';
+import TestLearningStyle from './Components/testlearningstyle/TestLearningStyle';
 import BeautifulLogin from './widget/BeautifulLogin'
 import PrivateRoute  from './AuthComponent/PrivateRoute'
 import { Redirect } from 'react-router';
@@ -68,7 +68,7 @@ function App() {
           <Dashboard/>
           </Route>
         <Route exact path="/dashboard/testlearningstyle">
-          <Test/>
+          <TestLearningStyle/>
         </Route>
         <Route exact path="/dashboard/courses">
           <Courses/>
