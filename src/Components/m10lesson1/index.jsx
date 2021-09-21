@@ -11,12 +11,10 @@ import WebViewer from "@pdftron/webviewer";
 
 var a=JSON.parse(sessionStorage.getItem('verbal'));
 var b=JSON.parse(sessionStorage.getItem('visual'));
-
-
 export default function Index() {
 
   if(true){
-    console.log("Hello I'm Le Hoai Nam");
+    console.log(b);
   }
   // const viewerDiv = useRef(null)
 
@@ -47,7 +45,6 @@ export default function Index() {
   // }, []);
       
       return (
-        
         <div className="m10l1_background">
           <div className="header_2" id="header2">
             <div className="section-title">
