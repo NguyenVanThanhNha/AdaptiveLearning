@@ -10,6 +10,12 @@
 	display: flex;
     margin-left: 14%;
 }
+.content_{
+	margin-top: 47px;
+	h1{
+		color: grey;
+	}
+}
 .content {
 	flex-direction: column;
 	justify-content: center;
@@ -169,6 +175,10 @@ iframe {
 	}
 }
 .learn {
+	.lesson-title{
+		color: darkgoldenrod;
+		font-size: 40px;
+	}
 	font-size: 20px;
 	margin-top: 30px;
 	float: left;
@@ -201,10 +211,18 @@ iframe {
 	border-radius: 10px;
 }
 .document-option {
-	a {
-		display: table-row;
-		font-weight: bold;
+	.lesson-title{
+		margin-bottom: 10px;
+		h1{
+			color: black !important;
+		}
 	}
+	li{
+		margin-top: 15px;
+	}
+	color: #007bff;;
+	margin-top: 47px;
+	font-weight: bold;
 }
 .row_content {
 	display: absolute;
@@ -213,6 +231,7 @@ iframe {
 	margin-top: 70px;
 	font-size: 20px;
 	font-weight: bold;
+	color: black;
 }
 .footer {
 	background: rgb(30,31,40);

@@ -44,7 +44,7 @@ function Question() {
                     {error && <Alert className="Alert" severity="error">{error}</Alert>}
                     <FormControl component="fieldset" className="Full-Width">
                         <Typography variant="h4" color="inherit" align="center" className="Text-Color">
-                            {question.id}. {ReactHtmlParser(question.question)}
+                            Question {question.id}: {ReactHtmlParser(question.question)}
                         </Typography>
                         {question.code &&
                             <div className="Code-Block">

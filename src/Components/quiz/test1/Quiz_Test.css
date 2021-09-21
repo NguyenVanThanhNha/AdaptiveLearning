@@ -8,7 +8,7 @@
 }
 
 h3, h4{
-  margin-top: 30px !important;
+  margin-top: 100px !important;
   font-weight: 300 !important;
   margin-bottom: 15px !important;
 }
@@ -21,15 +21,39 @@ h6{
 
 h4{
   text-align: left !important;
+  margin-top: -33px !important;
+  font-size: 1.5rem !important;
 }
-
+.MuiTypography-h3{
+  font-size: 40px !important;
+  line-height: 1.567 !important;
+}
 .MuiFormControlLabel-label, .MuiTypography-body1{
   font-weight: 300 !important;
+  margin-top: -100px;
+}
+.MuiFormGroup-root{
+  display: grid !important;
+  grid-template-columns: 100px 100px !important;
+  grid-column-gap: 370px !important;
+  grid-row-gap: 5px !important;
+}
+.MuiPaper-root{
+  width: 450px;
+}
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  font-weight: bold !important;
+  background-color: orange !important;
+}
+button {
+  margin-top: 45px !important;
+  border-radius: inherit !important;
 }
 
-button {
-  margin-top: 15px !important;
-  border-radius: inherit !important;
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: orange !important;
 }
 
 .Card{
@@ -48,7 +72,7 @@ button {
 .inlinecode {
   background-color: lightgray;
   padding: .2em .4em;
-  color: brown;
+  color: orange ;
 }
 
 .Code-Block{
@@ -87,13 +111,34 @@ pre code:first-child {
   width: -webkit-fill-available !important;
 }
 
+.Space-Bottom-know{
+  margin-bottom: 100px !important;
+  margin: 2em 1em !important;
+  background-color: green !important;
+}
+.Space-Bottom-think{
+  margin-bottom: 100px !important;
+  margin: 2em 1em !important;
+}
 .Space-Bottom{
   margin-bottom: 100px !important;
-  margin: 0em 0.5em !important;
+  margin: 2em 1em !important;
+}
+.Space-Bottom-maybe{
+  margin-bottom: 100px !important;
+  margin: 2em 1em !important;
+  background-color: orangered !important;
+}
+.Space-Bottom-unsure{
+  margin-bottom: 100px !important;
+  margin: 2em 1em !important;
+  background-color: red !important;
 }
 
 .Image{
-  max-height: 480px;
+  max-height: 580px;
+  max-width: 550px;
+  align-self: center;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

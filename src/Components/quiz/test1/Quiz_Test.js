@@ -1,6 +1,6 @@
 
 import './Quiz_Test.css';
-
+import { useHistory } from "react-router-dom";
 import React, { useReducer, useState } from 'react';
 import Header from './quiz_component/Header';
 import Question from './quiz_component/Question';
@@ -45,6 +45,12 @@ function Quiz() {
   /* let { id } = useParams(); */
   var jsonFileName = quizData.keys().filter(name => name === `./quiz2.json`)[0];
   const Questions = jsonFileName === undefined ? '' : quizData(jsonFileName);
+
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/dashboard/courses/math10/c5l1");
+  }
 
   const initialState = {
     Questions,
@@ -101,7 +107,7 @@ function Quiz() {
       setTotal(total+100);
     }
     else if(question.correct_answer !== currentAnswer){
-      setTotal(total+0)
+      setTotal(total+0);
     }
 
     answers.push(answer);
@@ -134,6 +140,7 @@ function Quiz() {
       correctAnswers.push(answer);
     }
     else if(question.correct_answer !== currentAnswer){
+      setTotal(total+0);
     }
     answers.push(answer);
     dispatch({ type: SET_ANSWERS, answers });
@@ -162,9 +169,11 @@ function Quiz() {
     }
     //if - else
     if (question.correct_answer === currentAnswer) {
+      setTotal(total+30);
       correctAnswers.push(answer);
     }
     else if(question.correct_answer !== currentAnswer){
+      setTotal(total+0);
     }
     //end if-else
     answers.push(answer);
@@ -195,9 +204,11 @@ function Quiz() {
     }
     //if else
     if (question.correct_answer === currentAnswer) {
+      setTotal(total+10);
       correctAnswers.push(answer);
     }
     else if(question.correct_answer !== currentAnswer){
+      setTotal(total+0);
     }
     //end of if else
     answers.push(answer);
@@ -243,11 +254,11 @@ function Quiz() {
               Test your knowledge
             </Typography>
           <Typography variant="h6" color="inherit" align="center" className="Text-Color">
-            Quiz - {Questions.length} Questions
+            This quiz have {Questions.length} questions
             </Typography>
           <Grid container justify="center">
             <Button variant="contained" color="primary" onClick={restart} size="large" disableElevation>
-              Start the Quiz!
+              Start Now
               </Button>
           </Grid>
         </React.Fragment>
@@ -261,8 +272,10 @@ function Quiz() {
           <Header />
           <Typography variant="h3" color="inherit" align="center" className="Text-Color">
             You got {((correctAnswers.length / answers.length) * 100).toFixed(1)}%<Typography variant="caption" color="inherit" align="center" className="Text-Color">({correctAnswers.length} of {answers.length})</Typography> of the questions correct!
-            Total {total}
-            Percent {((total/(answers.length*100))*100).toFixed(1)}
+            <br></br>
+            Total: {total} points
+            <br></br>
+            Percent: {((total/(answers.length*100))*100).toFixed(1)}%
         </Typography>
           <Grid container justify="center" alignItems="center">
             <Grid item xs={12} md={8} className="Grid-Item">
@@ -274,6 +287,9 @@ function Quiz() {
           <Grid container justify="center">
             <Button className="Space-Bottom" variant="contained" onClick={restart} color="primary" size="large" disableElevation>
               Try Again?
+            </Button>
+            <Button className="Space-Bottom" variant="contained" onClick={handleClick} color="primary" size="large" disableElevation>
+              Home
             </Button>
           </Grid>
         </React.Fragment>
@@ -287,16 +303,16 @@ function Quiz() {
             <Header />
             <Question />
             <Grid container justify="center" mr={2}>
-              <Button className="Space-Bottom" variant="contained" onClick={next_knowit} color="primary" size="large" disableElevation>
+              <Button className="Space-Bottom-know"  variant="contained" onClick={next_knowit} color="primary" size="large" disableElevation>
                 I know it
             </Button>
-            <Button className="Space-Bottom" variant="contained" onClick={next_thinkso} color="primary" size="large" disableElevation>
+            <Button className="Space-Bottom-think"  variant="contained" onClick={next_thinkso} color="primary" size="large" disableElevation>
                 I think so
             </Button>
-            <Button className="Space-Bottom" variant="contained" onClick={next_maybe} color="primary" size="large" disableElevation>
+            <Button className="Space-Bottom-maybe" variant="contained" onClick={next_maybe} color="primary" size="large" disableElevation>
                 Maybe
             </Button>
-            <Button className="Space-Bottom" variant="contained" onClick={next_unsure} color="primary" size="large" disableElevation>
+            <Button className="Space-Bottom-unsure" variant="contained" onClick={next_unsure} color="primary" size="large" disableElevation>
                 Unsure
             </Button>
             </Grid>
