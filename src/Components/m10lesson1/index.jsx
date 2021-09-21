@@ -9,8 +9,15 @@ import VideoModal from '../modalvideo/modalvideo'
 import WebViewer from "@pdftron/webviewer";
 // import pdf from "../../data/Algebra_Trigonometry_c5.pdf"
 
+/* var a=JSON.parse(sessionStorage.getItem('verbal'));
+var b=JSON.parse(sessionStorage.getItem('visual')); */
+var a=7,b=6;
+
 export default function Index() {
 
+  if(true){
+    console.log("Hello I'm Le Hoai Nam");
+  }
   // const viewerDiv = useRef(null)
 
   // useEffect(() => {
@@ -38,15 +45,16 @@ export default function Index() {
   //     });
   //   })
   // }, []);
-  
+      
       return (
+        
         <div className="m10l1_background">
           <div className="header_2" id="header2">
             <div className="section-title">
               <div className="subject-name">
-              <a ><Link to="/dashboard/courses/math10"><h1>Home</h1></Link></a>
+              <Link to="/dashboard/courses/math10"><h1>Home</h1></Link>
               </div>
-              <a ><Link to="/dashboard/courses/math10"><h2 className="lesson-name"> Unit 1: Trigonometric Fuctions</h2></Link></a>
+              <Link to="/dashboard/courses/math10"><h2 className="lesson-name"> Unit 1: Trigonometric Fuctions</h2></Link>
             </div>
           </div>
           
@@ -58,7 +66,7 @@ export default function Index() {
                     <div className="lesson-title">
                       Angle Measure
                     </div>
-                    <div className="content_">
+                    {b>a&&<div className="content_">
                       <h1>Video</h1>
                       <div className="content-inside">
                         <a href="#videostory_1" className="button more" id="videolink_1">
@@ -66,7 +74,6 @@ export default function Index() {
                           <VideoModal title="Angles Measure" id="hy95VyPet-M"/>
                         </a>
                         <div id="videostory_1" className="mfp-hide" style={{maxWidth: '75%', margin: '0 auto'}}>
-                                  
                         </div>
                       </div>
                       <div className="content-inside">
@@ -93,21 +100,24 @@ export default function Index() {
                           <VideoModal title="Circular Motion" id="_psIWtPBHzA"/>
                         </a>
                       </div>
-                    </div>
-                    <div className="document-option">
+                    </div>}
+                    {a>b&&<div className="document-option " >
                       <div className="lesson-title "><h1>Document</h1></div>
-                      <a>< Link to="./c5l1/d1">Document 1</Link></a>
-                      <a>< Link to="./c5l1/d1">Document 2</Link></a>
-                    </div>  
+                      <li>< Link to="./c5l1/d1">Angles Measure</Link></li>
+                      <li>< Link to="./c5l1/d1">Angles in Standard Position</Link></li>
+                      <li>< Link to="./c5l1/d1">Length of a Circular Arc</Link></li>
+                      <li>< Link to="./c5l1/d1">Area of a Circular Sector</Link></li>
+                      <li>< Link to="./c5l1/d1">Circular Motion</Link></li>
+                    </div>  }
                   </div>
                   <div className="learn">
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                      <a>< Link to="./c5l1/test1">Test 1: Angles in Standard Position</Link></a>
+                      < Link to="./c5l1/test1">Test 1: Angles in Standard Position</Link>
                       </div>
                       <div className="practice-noti">
-                      <VideoModal title="Try more to be better"/>
+                      Try more to be better
                       </div>
                     </div>
                     <div className="box-content">
@@ -115,7 +125,7 @@ export default function Index() {
                         <a href="#">Test 2: Area of a Circular Sector</a>
                       </div>
                       <div className="practice-noti">
-                      <VideoModal title="Angles"/>Try more to be better
+                        Try more to be better
                       </div>
                     </div>
                   </div>
@@ -129,7 +139,7 @@ export default function Index() {
                     <div className="lesson-title">
                       Trigonometry of Right Triangles
                     </div>
-                    <div className="content_ ">
+                    {b>a&&<div className="content_ ">
                       <h1>Video</h1>
                       <div className="content-inside">
                         <a href="#videostory_4" className="button more" id="videolink_4">
@@ -146,21 +156,22 @@ export default function Index() {
                       <div className="content-inside">
                         <a href="#videostory_6" className="button more" id="videolink_6">
                           <i className="fa fa-play-circle" aria-hidden="true"> &nbsp;</i>
-                          <VideoModal title="Applications of Trigonometry of Right Triangles"/>
+                          <VideoModal title="Applications of Trigonometry"/>
                         </a>
                       </div>
-                    </div> 
-                    <div className="document-option">
+                    </div> }
+                    {a>b&&<div className="document-option">
                       <div className="lesson-title "><h1>Document</h1></div>
-                      <a>< Link to="./c5l1/d1">Document 1</Link></a>
-                      <a>< Link to="./c5l1/d1">Document 2</Link></a>
-                    </div>    
+                      <li>< Link to="./c5l1/d1">Trigonometric Ratious</Link></li>
+                      <li>< Link to="./c5l1/d1">Special Triangles</Link></li>
+                      <li>< Link to="./c5l1/d1">Applications of Trigonometry</Link></li>
+                    </div>}
                   </div>
                   <div className="learn">
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="./quiz_lesson1.html">Test 1: Angles in Standard Position</a>
+                        <a href="./quiz_lesson1.html">Test 1: Trigonometric Ratious</a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -168,7 +179,7 @@ export default function Index() {
                     </div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="#">Test 2: Area of a Circular Sector</a>
+                        <a href="#">Test 2: Special Triangles</a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -184,8 +195,9 @@ export default function Index() {
                   <div className="learn">
                     <div className="lesson-title">
                       Trigonometry Function of Angles
-                      <h1>Video</h1>
                     </div>
+                    {b>a&&<div className="content_ ">
+                    <h1>Video</h1>
                     <div className="content-inside">
                       <a href="#videostory_7" className="button more" id="videolink_7">
                         <i className="fa fa-play-circle" aria-hidden="true"> &nbsp;</i>
@@ -204,12 +216,19 @@ export default function Index() {
                         <VideoModal title="Areas of Triangles"/>
                       </a>
                     </div>
+                  </div>}
+                  {a>b&&<div className="document-option " >
+                      <div className="lesson-title "><h1>Document</h1></div>
+                      <li>< Link to="./c5l1/d1">Trigonometry Function of Angles</Link></li>
+                      <li>< Link to="./c5l1/d1"> Trigonometric Identities</Link></li>
+                      <li>< Link to="./c5l1/d1"> Areas of Triangles</Link></li>
+                    </div>  }
                   </div>
                   <div className="learn">
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="#">Practice 1: Title 1</a>
+                        <a href="#">Test 1: Trigonometric Identities</a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -217,7 +236,7 @@ export default function Index() {
                     </div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="#">Practice 1: Title 1</a>
+                        <a href="#">Test 2: Areas of Triangles </a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -233,8 +252,10 @@ export default function Index() {
                   <div className="learn">
                     <div className="lesson-title">
                       The Law of Cosines
-                      <h1>Video</h1>
+                      
                     </div>
+                    {b>a&&<div className="content_ ">
+                    <h1>Video</h1>
                     <div className="content-inside">
                       <a href="#videostory_10" className="button more" id="videolink_10">
                         <i className="fa fa-play-circle" aria-hidden="true"> &nbsp;</i>
@@ -252,14 +273,20 @@ export default function Index() {
                         <i className="fa fa-play-circle" aria-hidden="true"> &nbsp;</i>
                         <VideoModal title="The Area of Triangles"/>
                       </a>
-                      
                     </div>
+                  </div>}
+                  {a>b&&<div className="document-option " >
+                      <div className="lesson-title "><h1>Document</h1></div>
+                      <li>< Link to="./c5l1/d1">The Law of Cosines</Link></li>
+                      <li>< Link to="./c5l1/d1">Navigation: Heading and Bearing</Link></li>
+                      <li>< Link to="./c5l1/d1">The Area of Triangles</Link></li>
+                    </div>  }
                   </div>
                   <div className="learn">
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="#">Practice 1: Title 1</a>
+                        <a href="#">Test 1: The Law of Cosines</a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -267,7 +294,7 @@ export default function Index() {
                     </div>
                     <div className="box-content">
                       <div className="practice-title">
-                        <a href="#">Practice 1: Title 1</a>
+                        <a href="#">Test 2: The Area of Triangles</a>
                       </div>
                       <div className="practice-noti">
                         Try more to be better
@@ -281,5 +308,4 @@ export default function Index() {
         </div>
       );
     }
-
 
