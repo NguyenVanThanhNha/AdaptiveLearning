@@ -109,12 +109,12 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
       console.log("confirm ok")
       setView('login');
     } catch (error) {
-      //setView('login');
-      setShowBanner({
-        message: "Can't confirm your account, please type right authetication code",
-        show: true,
-        type: 'error',
-      })
+      setView('login');
+      // setShowBanner({
+      //   message: "Can't confirm your account, please type right authetication code",
+      //   show: true,
+      //   type: 'error',
+      // })
     }
   }
 
