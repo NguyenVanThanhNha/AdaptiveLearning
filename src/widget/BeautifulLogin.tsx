@@ -74,6 +74,11 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
       checkUser();
     
     } catch (error) {
+      setShowBanner({
+        message: "Wrong password, please type again",
+        show: true,
+        type: 'error',
+      })
     }
   }
 
@@ -104,7 +109,7 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
       setView('login');
     } catch (error) {
       setShowBanner({
-        message: "",
+        message: "Can't confirm your account, please type right authetication code",
         show: true,
         type: 'error',
       })
