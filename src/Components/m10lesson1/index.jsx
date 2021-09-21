@@ -9,9 +9,9 @@ import VideoModal from '../modalvideo/modalvideo'
 import WebViewer from "@pdftron/webviewer";
 // import pdf from "../../data/Algebra_Trigonometry_c5.pdf"
 
-/* var a=JSON.parse(sessionStorage.getItem('verbal'));
-var b=JSON.parse(sessionStorage.getItem('visual')); */
-var a=7,b=6;
+var a=JSON.parse(sessionStorage.getItem('verbal'));
+var b=JSON.parse(sessionStorage.getItem('visual'));
+
 
 export default function Index() {
 
