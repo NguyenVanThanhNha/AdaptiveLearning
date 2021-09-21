@@ -113,6 +113,9 @@
     animation-name: fade;
     animation-duration: 1.5s;
   }
+  .fade:not(.show) {
+    opacity: 1;
+  }
   .pause-icon {
     position: absolute;
     /* top: 38%; */
@@ -128,7 +131,9 @@
     animation-name: pause;
     animation-duration: 0.5s;
   }
-  
+  .deneb_btn{
+    .a{color:white !important;}
+  }
   .bar {
     width: 100%;
     background-color: #ddd;

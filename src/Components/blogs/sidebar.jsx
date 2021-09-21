@@ -4,7 +4,7 @@ import {
  FaSearch,
  FaCheck
 } from "react-icons/fa";
-import { Field, Form, Formik, FormikProps } from 'formik';
+import { Field, Form, Formik } from 'formik';
 
 import data from "../../data/posts.json";
 

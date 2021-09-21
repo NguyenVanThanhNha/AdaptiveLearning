@@ -22,10 +22,7 @@ export default function Home() {
             <About/>
             <ProjectsInfo/>
             <Learning/>
-            {/* <Pricing/> */}
-            {/* <Testimonials/> */}
             <Blogs/>
-            {/* <Contact/> */}
       </Layout>
     )
 }

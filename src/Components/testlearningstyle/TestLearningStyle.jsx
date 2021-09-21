@@ -339,13 +339,13 @@ export default function TestLearningStyle() {
 	
 		for(var i=0; i<=44; i+=4){
 	
-		if (isCorrect === true && currentQuestion == i) {
+		if (isCorrect === true && currentQuestion === i) {
 			setActive(active + 1);
 			setReflective(reflective - 1);
 			sessionStorage.setItem('active', active);
 			sessionStorage.setItem('reflective', reflective);
 		}
-		else if (isCorrect === false && currentQuestion == i) {
+		else if (isCorrect === false && currentQuestion === i) {
 			setReflective(reflective + 1);
 			setActive(active -1);
 			sessionStorage.setItem('active', active);
@@ -353,13 +353,13 @@ export default function TestLearningStyle() {
 		}
 	}
 	for(var i=1; i<= 44; i=i+4){
-		if (isCorrect === true && currentQuestion == i) {
+		if (isCorrect === true && currentQuestion === i) {
 			setSensing(sensing + 1);
 			setRetuitive(retuitive - 1);
 			sessionStorage.setItem('sensing', sensing);
 			sessionStorage.setItem('retuitive', retuitive);
 		}
-		else if (isCorrect === false && currentQuestion  == i) {
+		else if (isCorrect === false && currentQuestion  === i) {
 			setSensing(sensing - 1);
 			setRetuitive(retuitive + 1);
 			sessionStorage.setItem('sensing', sensing);
@@ -367,13 +367,13 @@ export default function TestLearningStyle() {
 	} 
 }
 	for(var i=2; i<=44; i+=4){
-		if (isCorrect === true && currentQuestion == i) {
+		if (isCorrect === true && currentQuestion === i) {
 			setVisual(visual + 1);
 			setVerbal(verbal - 1);
 			sessionStorage.setItem('visual', visual);
 			sessionStorage.setItem('verbal', verbal);
 		}
-		else if (isCorrect === false && currentQuestion == i) {
+		else if (isCorrect === false && currentQuestion === i) {
 			setVisual(visual - 1);
 			setVerbal(verbal + 1);
 			sessionStorage.setItem('visual', visual);
@@ -381,13 +381,13 @@ export default function TestLearningStyle() {
 		}
 	}
 	for(var i=3; i<=44; i+=4){
-		if (isCorrect === true && currentQuestion == i) {
+		if (isCorrect === true && currentQuestion === i) {
 			setSequential(sequential + 1);
 			setGlobal(global - 1);
 			sessionStorage.setItem('sequential', sequential);
 			sessionStorage.setItem('global', global);
 		}
-		else if (isCorrect === false && currentQuestion == i) {
+		else if (isCorrect === false && currentQuestion === i) {
 			setSequential(sequential - 1);
 			setGlobal(global + 1);
 			sessionStorage.setItem('sequential', sequential);

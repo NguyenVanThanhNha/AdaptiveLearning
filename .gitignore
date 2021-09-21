@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+aws-exports.js
 
 # testing
 /coverage
@@ -33,7 +34,7 @@ amplify/backend/.temp
 build/
 dist/
 node_modules/
-aws-exports.js
+# aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
 amplifyconfiguration.dart
