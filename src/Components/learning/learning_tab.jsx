@@ -37,7 +37,7 @@ export default function PortfoliosTab() {
             <div className="container">
                 <SectionTitle
                     title="Your courses"
-                    description="When unknow printer took a gallery of type and scramblted it to make a type specimen book"
+                    // description="When unknow printer took a gallery of type and scramblted it to make a type specimen book"
                 />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="design">
                     <div className="row">

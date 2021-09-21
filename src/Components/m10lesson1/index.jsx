@@ -1,52 +1,19 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Component } from "react/cjs/react.production.min";
 import  './m10lesson1.scss'
-// import *  from 'mdb-react-ui-kit'; // lib
-// import { Input } from 'mdb-react-ui-kit'; // module
 import '../../../node_modules/react-modal-video/scss/modal-video.scss'
 import VideoModal from '../modalvideo/modalvideo'
-import WebViewer from "@pdftron/webviewer";
-// import pdf from "../../data/Algebra_Trigonometry_c5.pdf"
 
 export default function Index() {
-
-  // const viewerDiv = useRef(null)
-
-  // useEffect(() => {
-  //   WebViewer({ 
-  //     path: 'lib', 
-  //     initialDoc:'/core/pdf/Algebra_Trigonometry_c5.pdf'
-  //   }, 
-  //   viewerDiv.current  ).then(instance => {
-  //     const { documentViewer, annotationManager, Annotations } = instance.Core;
-
-  //     documentViewer.addEventListener('documentLoaded', () => {
-  //       const rectangleAnnot = new Annotations.RectangleAnnotation({
-  //         PageNumber: 1,
-  //         // values are in page coordinates with (0, 0) in the top left
-  //         X: 100,
-  //         Y: 150,
-  //         Width: 200,
-  //         Height: 50,
-  //         Author: annotationManager.getCurrentUser()
-  //       });
-
-  //       annotationManager.addAnnotation(rectangleAnnot);
-  //       // need to draw the annotation otherwise it won't show up until the page is refreshed
-  //       annotationManager.redrawAnnotation(rectangleAnnot);
-  //     });
-  //   })
-  // }, []);
   
       return (
         <div className="m10l1_background">
           <div className="header_2" id="header2">
             <div className="section-title">
               <div className="subject-name">
-              <a ><Link to="/dashboard/courses/math10"><h1>Home</h1></Link></a>
+              <a href="/dashboard/courses/math10"><h1>Home</h1></a>
               </div>
-              <a ><Link to="/dashboard/courses/math10"><h2 className="lesson-name"> Unit 1: Trigonometric Fuctions</h2></Link></a>
+              <a href="/dashboard/courses/math10"><h2 className="lesson-name"> Unit 1: Trigonometric Fuctions</h2></a>
             </div>
           </div>
           
@@ -96,15 +63,15 @@ export default function Index() {
                     </div>
                     <div className="document-option">
                       <div className="lesson-title "><h1>Document</h1></div>
-                      <a>< Link to="./c5l1/d1">Document 1</Link></a>
-                      <a>< Link to="./c5l1/d1">Document 2</Link></a>
+                      <a href="./c5l1/d1">Document 1</a>
+                      <a href="./c5l1/d1">Document 2</a>
                     </div>  
                   </div>
                   <div className="learn">
                     <div className="practice-field">Practice</div>
                     <div className="box-content">
                       <div className="practice-title">
-                      <a>< Link to="./c5l1/test1">Test 1: Angles in Standard Position</Link></a>
+                      <a href="./c5l1/test1">Test 1: Angles in Standard Position</a>
                       </div>
                       <div className="practice-noti">
                       <VideoModal title="Try more to be better"/>
