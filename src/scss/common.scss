@@ -74,13 +74,7 @@ button{
 	border: none;
 	cursor: pointer;
 }
-button{
-	outline: none;
-	&:hover,
-	&:focus{
-		outline: none;
-	}
-}
+
 body{
 	font-family: $font1;
 	font-size: 15px;
