@@ -45,19 +45,9 @@ const ConfirmPage: React.FC<LoginPageProps> = ({ handleView, mailConfirm }) => (
             </ButtonContainer>
             <ExtraContainer>
               <InlineLink
-                text="Log in with social media?"
-                textLink="Social log in"
-                handleView={() => handleView('social')}
-              />
-              <InlineLink
-                text="Don't have an account?"
-                textLink="Sign up!"
-                handleView={() => handleView('signup')}
-              />
-              <InlineLink
-                text="Forgot your password?"
-                textLink="Reset password"
-                handleView={() => handleView('reset')}
+                text="You have already an account?"
+                textLink="Sign in!"
+                handleView={() => handleView('signin')}
               />
             </ExtraContainer>
           </LeftContainer>
