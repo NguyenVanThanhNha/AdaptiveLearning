@@ -92,7 +92,7 @@
   font-size: 16px;
   color: #ffffff;
   background-color: #252d4a;
-  border-radius: 15px;
+  border-radius: 15px !important; 
   display: flex;
   padding: 5px;
   justify-content: flex-start;
@@ -132,6 +132,7 @@
   align-items: center;
   margin-top: 20px;
   margin-left: 25%;
+  border-radius: 15px;
 }
 
 .btn-learning {
