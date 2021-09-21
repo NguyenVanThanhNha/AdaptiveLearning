@@ -4,8 +4,45 @@ import  './m10lesson1.scss'
 import '../../../node_modules/react-modal-video/scss/modal-video.scss'
 import VideoModal from '../modalvideo/modalvideo'
 
-export default function Index() {
   
+import WebViewer from "@pdftron/webviewer";
+// import pdf from "../../data/Algebra_Trigonometry_c5.pdf"
+
+var a=JSON.parse(sessionStorage.getItem('verbal'));
+var b=JSON.parse(sessionStorage.getItem('visual'));
+export default function Index() {
+
+  if(true){
+    console.log(b);
+  }
+  // const viewerDiv = useRef(null)
+
+  // useEffect(() => {
+  //   WebViewer({ 
+  //     path: 'lib', 
+  //     initialDoc:'/core/pdf/Algebra_Trigonometry_c5.pdf'
+  //   }, 
+  //   viewerDiv.current  ).then(instance => {
+  //     const { documentViewer, annotationManager, Annotations } = instance.Core;
+
+  //     documentViewer.addEventListener('documentLoaded', () => {
+  //       const rectangleAnnot = new Annotations.RectangleAnnotation({
+  //         PageNumber: 1,
+  //         // values are in page coordinates with (0, 0) in the top left
+  //         X: 100,
+  //         Y: 150,
+  //         Width: 200,
+  //         Height: 50,
+  //         Author: annotationManager.getCurrentUser()
+  //       });
+
+  //       annotationManager.addAnnotation(rectangleAnnot);
+  //       // need to draw the annotation otherwise it won't show up until the page is refreshed
+  //       annotationManager.redrawAnnotation(rectangleAnnot);
+  //     });
+  //   })
+  // }, []);
+      
       return (
         <div className="m10l1_background">
           <div className="header_2" id="header2">
