@@ -6,8 +6,7 @@ import PageHeader from "../Components/page_header";
 import data from "../data/posts.json"
 export default function BlogDetails(props) {
     const { id } = useParams();
-    const { pathname } = useLocation();
-    const postData = data.posts.find(post=>post.id == id);
+    const postData = data.posts.find(post=>post.id === id);
     const [post, setPost] = useState([]);
     useEffect(()=>{
         setPost(postData);

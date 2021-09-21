@@ -1,5 +1,4 @@
 import React from 'react';
-import serviceIcon_01 from "../images/icon_1.png";
 import { FaPlay } from "react-icons/fa";
 export default function ServiceItem(props) {
 

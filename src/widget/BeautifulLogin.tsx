@@ -6,7 +6,7 @@ import SignupPage from '../AuthComponent/Pages/SignupPage'
 import ConfirmPage from '../AuthComponent/Pages/ConfirmPage' 
 import SocialPage from '../AuthComponent/Pages/SocialPage'
 
-import Amplify, { Auth, Hub, API } from "aws-amplify";
+import Amplify, { Auth, Hub } from "aws-amplify";
 import awsmobile from '../aws-exports'
 import WelcomePage from '../AuthComponent/Pages/WelcomePage'
 
@@ -74,6 +74,12 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
       checkUser();
     
     } catch (error) {
+      // setView('welcome')
+      setShowBanner({
+        message: "Wrong password, please type again",
+        show: true,
+        type: 'error',
+      })
     }
   }
 
@@ -103,8 +109,9 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
       console.log("confirm ok")
       setView('login');
     } catch (error) {
+      //setView('login');
       setShowBanner({
-        message: "",
+        message: "Can't confirm your account, please type right authetication code",
         show: true,
         type: 'error',
       })
@@ -136,7 +143,7 @@ const BeautifulLogin: React.FC<BeautifulLoginProps> = () => {
   }
 
   const resetPassword = async (data: { email: string }) => {
-    const { email } = data
+    // const { email } = data
     try {
       
       setShowBanner({
